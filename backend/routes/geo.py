@@ -1,9 +1,14 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+
+from backend.database.connection import get_db
+from backend.models.entities import GeoHotspot
+from backend.services.geospatial_service import GeospatialIntelligenceService
 
 
 router = APIRouter()
 
 
-@router.get("/hotspots")
-def list_hotspots() -> dict[str, list]:
-    return {"hotspots": []}
+@router.get("/hotspots", response_model=list[GeoHotspot])
+def list_hotspots(db: Session = Depends(get_db)) -> list[GeoHotspot]:
+    return GeospatialIntelligenceService().compute_hotspots(db)
