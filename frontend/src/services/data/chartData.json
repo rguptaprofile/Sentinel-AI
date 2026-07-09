@@ -1,0 +1,55 @@
+{
+  "fraudTrend": [
+    { "month": "Oct", "reports": 8200, "losses": 45 },
+    { "month": "Nov", "reports": 9100, "losses": 52 },
+    { "month": "Dec", "reports": 10500, "losses": 61 },
+    { "month": "Jan", "reports": 11200, "losses": 68 },
+    { "month": "Feb", "reports": 12800, "losses": 74 },
+    { "month": "Mar", "reports": 14200, "losses": 82 }
+  ],
+  "reportsByState": [
+    { "state": "Maharashtra", "reports": 2847, "fill": "#2563EB" },
+    { "state": "Delhi", "reports": 2156, "fill": "#3B82F6" },
+    { "state": "Karnataka", "reports": 1876, "fill": "#60A5FA" },
+    { "state": "Tamil Nadu", "reports": 1543, "fill": "#93C5FD" },
+    { "state": "Telangana", "reports": 1234, "fill": "#BFDBFE" },
+    { "state": "West Bengal", "reports": 987, "fill": "#DBEAFE" }
+  ],
+  "scamCategories": [
+    { "name": "UPI Scams", "value": 35, "fill": "#2563EB" },
+    { "name": "Voice Phishing", "value": 22, "fill": "#38BDF8" },
+    { "name": "Investment Fraud", "value": 18, "fill": "#60A5FA" },
+    { "name": "Counterfeit", "value": 12, "fill": "#93C5FD" },
+    { "name": "OTP Fraud", "value": 8, "fill": "#BFDBFE" },
+    { "name": "Other", "value": 5, "fill": "#DBEAFE" }
+  ],
+  "transactionVolume": [
+    { "day": "Mon", "volume": 4200, "flagged": 89 },
+    { "day": "Tue", "volume": 3800, "flagged": 72 },
+    { "day": "Wed", "volume": 5100, "flagged": 124 },
+    { "day": "Thu", "volume": 4600, "flagged": 98 },
+    { "day": "Fri", "volume": 5800, "flagged": 156 },
+    { "day": "Sat", "volume": 3200, "flagged": 67 },
+    { "day": "Sun", "volume": 2100, "flagged": 45 }
+  ],
+  "riskDistribution": [
+    { "range": "0-20", "count": 1240, "fill": "#22C55E" },
+    { "range": "21-40", "count": 890, "fill": "#84CC16" },
+    { "range": "41-60", "count": 654, "fill": "#F59E0B" },
+    { "range": "61-80", "count": 432, "fill": "#F97316" },
+    { "range": "81-100", "count": 287, "fill": "#EF4444" }
+  ],
+  "systemPerformance": [
+    { "time": "00:00", "cpu": 45, "memory": 62, "requests": 1200 },
+    { "time": "04:00", "cpu": 38, "memory": 58, "requests": 800 },
+    { "time": "08:00", "cpu": 72, "memory": 71, "requests": 3400 },
+    { "time": "12:00", "cpu": 85, "memory": 78, "requests": 5200 },
+    { "time": "16:00", "cpu": 79, "memory": 74, "requests": 4800 },
+    { "time": "20:00", "cpu": 65, "memory": 68, "requests": 3100 }
+  ],
+  "landingStats": [
+    { "label": "Cybercrime Reports", "value": "1.14M", "change": "+60%", "icon": "shield" },
+    { "label": "Growth Rate", "value": "60%", "change": "YoY", "icon": "trending" },
+    { "label": "Partner Agencies", "value": "500+", "change": "Active", "icon": "building" }
+  ]
+}
