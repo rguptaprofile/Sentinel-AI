@@ -33,3 +33,17 @@ export function useAlerts() {
 
   return { alerts, loading }
 }
+
+export function useChartData() {
+  const [chartData, setChartData] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    api.getChartData().then((data) => {
+      setChartData(data)
+      setLoading(false)
+    })
+  }, [])
+
+  return { chartData, loading }
+}

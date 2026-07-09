@@ -1,10 +1,14 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts'
-import chartData from '@/services/data/chartData.json'
+import fallbackChartData from '@/services/data/chartData.json'
+import { useChartData } from '@/hooks/useDashboardData'
 
 export default function TransactionVolumeChart() {
+  const { chartData } = useChartData()
+  const data = chartData?.transactionVolume?.length ? chartData.transactionVolume : fallbackChartData.transactionVolume
+
   return (
     <ResponsiveContainer width="100%" height={280}>
-      <BarChart data={chartData.transactionVolume}>
+      <BarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
         <XAxis dataKey="day" tick={{ fill: 'hsl(var(--muted-foreground))' }} />
         <YAxis tick={{ fill: 'hsl(var(--muted-foreground))' }} />

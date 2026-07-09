@@ -16,6 +16,8 @@ class CitizenReport(BaseModel):
     description: str
     language: str = "en"
     location: str | None = None
+    amount: float | None = None
+    incident_type: str | None = None
 
 
 class CitizenReportResponse(CitizenReport):
@@ -31,6 +33,7 @@ class ThreatAlert(BaseModel):
     severity: AlertSeverity
     source: str
     summary: str
+    region: str | None = None
 
 
 class ThreatAlertResponse(ThreatAlert):
@@ -91,3 +94,35 @@ class GeoHotspot(BaseModel):
     risk_score: float | None = None
 
     model_config = {"from_attributes": True}
+
+
+class IntelligenceFusionRequest(BaseModel):
+    report_id: str | None = None
+    transaction_id: str | None = None
+    denomination: int | None = None
+    serial_number: str | None = None
+    image_uri: str | None = None
+    transcript: str | None = None
+    suspected_number: str | None = None
+    voice_confidence: float | None = Field(default=None, ge=0, le=1)
+    latitude: float | None = None
+    longitude: float | None = None
+    location: str | None = None
+    indicators: list[str] = []
+
+
+class ModelSignal(BaseModel):
+    model_name: str
+    model_type: str
+    score: float
+    verdict: str
+    features: dict = {}
+
+
+class IntelligenceFusionResponse(BaseModel):
+    risk_score: float
+    verdict: str
+    priority: str
+    signals: list[ModelSignal]
+    recommended_actions: list[str]
+    alert_id: str | None = None

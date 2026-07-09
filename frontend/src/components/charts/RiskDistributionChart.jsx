@@ -1,10 +1,14 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts'
-import chartData from '@/services/data/chartData.json'
+import fallbackChartData from '@/services/data/chartData.json'
+import { useChartData } from '@/hooks/useDashboardData'
 
 export default function RiskDistributionChart() {
+  const { chartData } = useChartData()
+  const data = chartData?.riskDistribution?.length ? chartData.riskDistribution : fallbackChartData.riskDistribution
+
   return (
     <ResponsiveContainer width="100%" height={280}>
-      <BarChart data={chartData.riskDistribution}>
+      <BarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
         <XAxis dataKey="range" tick={{ fill: 'hsl(var(--muted-foreground))' }} />
         <YAxis tick={{ fill: 'hsl(var(--muted-foreground))' }} />
@@ -16,7 +20,7 @@ export default function RiskDistributionChart() {
           }}
         />
         <Bar dataKey="count" radius={[4, 4, 0, 0]}>
-          {chartData.riskDistribution.map((entry, index) => (
+          {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={entry.fill} />
           ))}
         </Bar>

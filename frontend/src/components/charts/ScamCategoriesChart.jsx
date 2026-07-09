@@ -1,12 +1,16 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts'
-import chartData from '@/services/data/chartData.json'
+import fallbackChartData from '@/services/data/chartData.json'
+import { useChartData } from '@/hooks/useDashboardData'
 
 export default function ScamCategoriesChart() {
+  const { chartData } = useChartData()
+  const data = chartData?.scamCategories?.length ? chartData.scamCategories : fallbackChartData.scamCategories
+
   return (
     <ResponsiveContainer width="100%" height={280}>
       <PieChart>
         <Pie
-          data={chartData.scamCategories}
+          data={data}
           cx="50%"
           cy="50%"
           innerRadius={60}
@@ -15,7 +19,7 @@ export default function ScamCategoriesChart() {
           dataKey="value"
           nameKey="name"
         >
-          {chartData.scamCategories.map((entry, index) => (
+          {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={entry.fill} />
           ))}
         </Pie>

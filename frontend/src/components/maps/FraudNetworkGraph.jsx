@@ -1,4 +1,6 @@
-import networkGraph from '@/services/data/networkGraph.json'
+import { useEffect, useState } from 'react'
+import fallbackNetworkGraph from '@/services/data/networkGraph.json'
+import api from '@/services/api'
 
 const nodeColors = {
   suspect: '#EF4444',
@@ -10,9 +12,16 @@ const nodeColors = {
 }
 
 export default function FraudNetworkGraph() {
-  const { nodes, edges } = networkGraph
+  const [graph, setGraph] = useState(fallbackNetworkGraph)
+  const { nodes, edges } = graph
   const width = 700
   const height = 400
+
+  useEffect(() => {
+    api.getNetworkGraph().then((data) => {
+      if (data?.nodes?.length) setGraph(data)
+    })
+  }, [])
 
   return (
     <div className="relative w-full overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 p-4">

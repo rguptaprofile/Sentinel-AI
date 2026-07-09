@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from 'react-leaflet'
-import heatmapData from '@/services/data/heatmapData.json'
+import fallbackHeatmapData from '@/services/data/heatmapData.json'
+import api from '@/services/api'
 import LoadingSpinner from '@/components/common/LoadingSpinner'
 
 function MapController() {
@@ -20,9 +21,11 @@ function getIntensityColor(intensity) {
 
 export default function IndiaHeatMap({ height = '100%' }) {
   const [ready, setReady] = useState(false)
+  const [points, setPoints] = useState(fallbackHeatmapData)
 
   useEffect(() => {
     setReady(true)
+    api.getHeatmapData().then((data) => setPoints(data?.length ? data : fallbackHeatmapData))
   }, [])
 
   if (!ready) {
@@ -41,7 +44,7 @@ export default function IndiaHeatMap({ height = '100%' }) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <MapController />
-        {heatmapData.map((point) => (
+        {points.map((point) => (
           <CircleMarker
             key={point.city}
             center={[point.lat, point.lng]}

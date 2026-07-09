@@ -7,36 +7,46 @@ import networkGraph from './data/networkGraph.json'
 import users from './data/users.json'
 
 const delay = (ms = 300) => new Promise((resolve) => setTimeout(resolve, ms))
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api/v1'
+
+async function fetchJson(path, fallback, options = {}) {
+  try {
+    const response = await fetch(`${API_BASE}${path}`, {
+      headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+      ...options,
+    })
+    if (!response.ok) throw new Error(`API ${response.status}`)
+    return await response.json()
+  } catch (error) {
+    console.warn(`Using local fallback for ${path}:`, error.message)
+    await delay(150)
+    return fallback
+  }
+}
 
 export const api = {
   async getFraudReports() {
-    await delay()
-    return fraudReports
+    return fetchJson('/dashboard/reports', fraudReports)
   },
 
   async getAlerts() {
-    await delay(200)
-    return alerts
+    return fetchJson('/dashboard/alerts', alerts)
   },
 
   async getTransactions() {
-    await delay()
-    return transactions
+    return fetchJson('/dashboard/transactions', transactions)
   },
 
   async getHeatmapData() {
-    await delay(200)
-    return heatmapData
+    return fetchJson('/dashboard/heatmap', heatmapData)
   },
 
   async getChartData() {
-    await delay(100)
-    return chartData
+    return fetchJson('/dashboard/charts', chartData)
   },
 
   async getNetworkGraph() {
-    await delay()
-    return networkGraph
+    return fetchJson('/dashboard/network-graph', networkGraph)
   },
 
   async getUsers() {
@@ -45,7 +55,6 @@ export const api = {
   },
 
   async getDashboardStats(role) {
-    await delay(200)
     const stats = {
       police: {
         activeThreats: 47,
@@ -72,7 +81,35 @@ export const api = {
         systemHealth: 98.7,
       },
     }
-    return stats[role] || stats.police
+    return fetchJson(`/dashboard/stats/${role}`, stats[role] || stats.police)
+  },
+
+  async submitCitizenReport(payload) {
+    return fetchJson('/reports/', null, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    })
+  },
+
+  async analyzeThreat(payload) {
+    return fetchJson('/intelligence/fusion/analyze', null, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    })
+  },
+
+  async scanCurrency(payload) {
+    return fetchJson('/counterfeit/scan', null, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    })
+  },
+
+  async classifyScam(payload) {
+    return fetchJson('/scam-detection/classify', null, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    })
   },
 }
 
