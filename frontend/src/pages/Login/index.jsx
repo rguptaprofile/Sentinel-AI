@@ -18,8 +18,8 @@ const roles = [
 
 export default function LoginPage() {
   const [selectedRole, setSelectedRole] = useState('citizen')
-  const [email, setEmail] = useState('user@example.com')
-  const [password, setPassword] = useState('password')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const { login } = useAuth()
   const navigate = useNavigate()
 
@@ -104,14 +104,14 @@ export default function LoginPage() {
                   <Label htmlFor="email">Email</Label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                    <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="pl-9" />
+                    <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="pl-9" placeholder="you@example.com" autoComplete="email" required />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password">Password</Label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                    <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="pl-9" />
+                    <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="pl-9" placeholder="Enter your password" autoComplete="current-password" required />
                   </div>
                 </div>
                 <Button type="submit" variant="gradient" className="w-full" size="lg">
@@ -120,8 +120,8 @@ export default function LoginPage() {
               </form>
 
               <p className="mt-6 text-center text-sm text-muted-foreground">
-                Don't have an account?{' '}
-                <Link to="/" className="text-primary font-medium hover:underline">Contact administrator</Link>
+                New to SentinelAI?{' '}
+                <Link to="/signup" className="text-primary font-medium hover:underline">Create an account</Link>
               </p>
             </CardContent>
           </Card>

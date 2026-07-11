@@ -5,6 +5,7 @@ import DashboardLayout from '@/components/layout/DashboardLayout'
 import ProtectedRoute from '@/components/layout/ProtectedRoute'
 import LandingPage from '@/pages/Landing'
 import LoginPage from '@/pages/Login'
+import SignUpPage from '@/pages/SignUp'
 import DashboardOverview from '@/pages/Dashboard'
 import CitizenDashboard from '@/pages/Citizen'
 import PoliceDashboard from '@/pages/Police'
@@ -19,6 +20,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
 
             <Route element={<ProtectedRoute />}>
               <Route path="/dashboard" element={<DashboardLayout />}>

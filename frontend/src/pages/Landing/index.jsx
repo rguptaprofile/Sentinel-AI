@@ -70,8 +70,8 @@ export default function LandingPage() {
             <Link to="/login">
               <Button variant="ghost">Sign In</Button>
             </Link>
-            <Link to="/login">
-              <Button variant="gradient">Get Started</Button>
+            <Link to="/signup">
+              <Button variant="gradient">Sign Up</Button>
             </Link>
           </div>
         </div>
@@ -100,9 +100,9 @@ export default function LandingPage() {
                 next-generation AI threat detection and fraud intelligence.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Link to="/login">
+                <Link to="/signup">
                   <Button variant="gradient" size="lg" className="gap-2">
-                    Get Started <ArrowRight className="h-4 w-4" />
+                    Sign Up <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
                 <Button variant="outline" size="lg" className="gap-2">
@@ -249,9 +249,9 @@ export default function LandingPage() {
             <p className="mt-4 text-white/80 max-w-xl mx-auto">
               Join 500+ agencies using SentinelAI to protect citizens from digital fraud.
             </p>
-            <Link to="/login">
+            <Link to="/signup">
               <Button size="lg" variant="secondary" className="mt-8 gap-2">
-                Get Started Free <ArrowRight className="h-4 w-4" />
+                Sign Up Free <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </div>

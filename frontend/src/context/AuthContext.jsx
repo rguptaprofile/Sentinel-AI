@@ -23,10 +23,10 @@ export function AuthProvider({ children }) {
     }
   }, [user])
 
-  const login = (role, email) => {
+  const login = (role, email, name) => {
     const newUser = {
       id: `user-${Date.now()}`,
-      name: email.split('@')[0].replace('.', ' '),
+      name: name || email.split('@')[0].replace('.', ' '),
       email,
       role,
     }
