@@ -1,9 +1,9 @@
 from collections import Counter
 
 from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
+from pymongo.database import Database
 
-from backend.database.connection import get_db
+from backend.database.connection import count_documents, get_db, list_documents
 from backend.database.models import (
     AlertRecord,
     CitizenReportRecord,
@@ -19,14 +19,16 @@ router = APIRouter()
 
 
 @router.get("/stats/{role}")
-def get_dashboard_stats(role: str, db: Session = Depends(get_db)) -> dict:
-    open_alerts = db.query(AlertRecord).filter(AlertRecord.status == "open").count()
-    reports = db.query(CitizenReportRecord).count()
-    avg_report_risk = _avg([row.risk_score or 0 for row in db.query(CitizenReportRecord).all()])
-    counterfeit_cases = db.query(CounterfeitScanRecord).filter(CounterfeitScanRecord.verdict != "likely_genuine").count()
-    suspicious_txns = db.query(TransactionEventRecord).filter(TransactionEventRecord.risk_score >= 60).count()
-    blocked = db.query(TransactionEventRecord).filter(TransactionEventRecord.status == "blocked").count()
-    high_risk = db.query(TransactionEventRecord).filter(TransactionEventRecord.risk_score >= 80).count()
+def get_dashboard_stats(role: str, db: Database = Depends(get_db)) -> dict:
+    report_rows = list_documents(db, CitizenReportRecord)
+    txn_rows = list_documents(db, TransactionEventRecord)
+    open_alerts = count_documents(db, AlertRecord, {"status": "open"})
+    reports = count_documents(db, CitizenReportRecord)
+    avg_report_risk = _avg([row.risk_score or 0 for row in report_rows])
+    counterfeit_cases = count_documents(db, CounterfeitScanRecord, {"verdict": {"$ne": "likely_genuine"}})
+    suspicious_txns = count_documents(db, TransactionEventRecord, {"risk_score": {"$gte": 60}})
+    blocked = count_documents(db, TransactionEventRecord, {"status": "blocked"})
+    high_risk = count_documents(db, TransactionEventRecord, {"risk_score": {"$gte": 80}})
 
     stats = {
         "police": {
@@ -36,14 +38,14 @@ def get_dashboard_stats(role: str, db: Session = Depends(get_db)) -> dict:
             "counterfeitCases": counterfeit_cases,
         },
         "citizen": {
-            "nearbyScams": db.query(GeoIncidentRecord).filter(GeoIncidentRecord.risk_score >= 0.6).count(),
-            "verifiedToday": db.query(ModelRunRecord).count(),
+            "nearbyScams": count_documents(db, GeoIncidentRecord, {"risk_score": {"$gte": 0.6}}),
+            "verifiedToday": count_documents(db, ModelRunRecord),
             "safetyScore": max(1, round(100 - avg_report_risk)),
             "activeAlerts": open_alerts,
         },
         "bank": {
             "suspiciousTransactions": suspicious_txns,
-            "fraudScore": round(_avg([row.risk_score for row in db.query(TransactionEventRecord).all()])),
+            "fraudScore": round(_avg([row.risk_score for row in txn_rows])),
             "blockedAccounts": blocked,
             "highRiskAccounts": high_risk,
         },
@@ -58,8 +60,8 @@ def get_dashboard_stats(role: str, db: Session = Depends(get_db)) -> dict:
 
 
 @router.get("/reports")
-def get_fraud_reports(db: Session = Depends(get_db)) -> list[dict]:
-    rows = db.query(CitizenReportRecord).order_by(CitizenReportRecord.created_at.desc()).limit(50).all()
+def get_fraud_reports(db: Database = Depends(get_db)) -> list[dict]:
+    rows = list_documents(db, CitizenReportRecord, sort=[("created_at", -1)], limit=50)
     return [
         {
             "id": row.id[:8],
@@ -77,8 +79,8 @@ def get_fraud_reports(db: Session = Depends(get_db)) -> list[dict]:
 
 
 @router.get("/transactions")
-def get_transactions(db: Session = Depends(get_db)) -> list[dict]:
-    rows = db.query(TransactionEventRecord).order_by(TransactionEventRecord.event_time.desc()).limit(50).all()
+def get_transactions(db: Database = Depends(get_db)) -> list[dict]:
+    rows = list_documents(db, TransactionEventRecord, sort=[("event_time", -1)], limit=50)
     return [
         {
             "id": row.id[:8],
@@ -97,8 +99,8 @@ def get_transactions(db: Session = Depends(get_db)) -> list[dict]:
 
 
 @router.get("/alerts")
-def get_live_alerts(db: Session = Depends(get_db)) -> list[dict]:
-    rows = db.query(AlertRecord).order_by(AlertRecord.created_at.desc()).limit(20).all()
+def get_live_alerts(db: Database = Depends(get_db)) -> list[dict]:
+    rows = list_documents(db, AlertRecord, sort=[("created_at", -1)], limit=20)
     return [
         {
             "id": row.id,
@@ -114,8 +116,8 @@ def get_live_alerts(db: Session = Depends(get_db)) -> list[dict]:
 
 
 @router.get("/heatmap")
-def get_heatmap(db: Session = Depends(get_db)) -> list[dict]:
-    rows = db.query(GeoIncidentRecord).order_by(GeoIncidentRecord.risk_score.desc()).limit(50).all()
+def get_heatmap(db: Database = Depends(get_db)) -> list[dict]:
+    rows = list_documents(db, GeoIncidentRecord, sort=[("risk_score", -1)], limit=50)
     return [
         {
             "lat": row.latitude,
@@ -129,8 +131,8 @@ def get_heatmap(db: Session = Depends(get_db)) -> list[dict]:
 
 
 @router.get("/network-graph")
-def get_network_graph(db: Session = Depends(get_db)) -> dict:
-    nodes = db.query(FraudGraphNodeRecord).order_by(FraudGraphNodeRecord.created_at).limit(30).all()
+def get_network_graph(db: Database = Depends(get_db)) -> dict:
+    nodes = list_documents(db, FraudGraphNodeRecord, sort=[("created_at", 1)], limit=30)
     graph_nodes = [
         {
             "id": node.id,
@@ -147,9 +149,9 @@ def get_network_graph(db: Session = Depends(get_db)) -> dict:
 
 
 @router.get("/charts")
-def get_chart_data(db: Session = Depends(get_db)) -> dict:
-    reports = db.query(CitizenReportRecord).all()
-    txns = db.query(TransactionEventRecord).all()
+def get_chart_data(db: Database = Depends(get_db)) -> dict:
+    reports = list_documents(db, CitizenReportRecord)
+    txns = list_documents(db, TransactionEventRecord)
     state_counts = Counter((report.location or "Unknown").split(",")[-1].strip() for report in reports)
     type_counts = Counter(report.incident_type or "Other" for report in reports)
     return {

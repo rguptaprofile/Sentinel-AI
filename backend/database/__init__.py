@@ -1,1 +1,1 @@
-"""Database connection, migrations, and schema assets."""
+"""MongoDB connection, document schemas, and migration assets."""

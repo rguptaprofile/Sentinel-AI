@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
+from pymongo.database import Database
 
-from backend.database.connection import get_db
+from backend.database.connection import get_db, insert_document
 from backend.database.models import ScamSessionRecord
 from backend.models.entities import ScamClassificationRequest, ScamClassificationResponse
 from backend.services.scam_service import ScamDetectionService
@@ -13,7 +13,7 @@ router = APIRouter()
 @router.post("/classify", response_model=ScamClassificationResponse, status_code=201)
 def classify_scam_session(
     payload: ScamClassificationRequest,
-    db: Session = Depends(get_db),
+    db: Database = Depends(get_db),
 ) -> ScamClassificationResponse:
     result = ScamDetectionService().classify(payload.model_dump())
     session = ScamSessionRecord(
@@ -22,9 +22,7 @@ def classify_scam_session(
         risk_score=result["risk_score"],
         verdict=result["verdict"],
     )
-    db.add(session)
-    db.commit()
-    db.refresh(session)
+    insert_document(db, session)
     return ScamClassificationResponse(
         id=session.id,
         risk_score=session.risk_score or 0,

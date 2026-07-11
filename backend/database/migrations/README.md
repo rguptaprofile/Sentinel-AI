@@ -1,7 +1,9 @@
-# Migrations
+# MongoDB Migrations
 
-Place Alembic migration files here after initializing Alembic for the backend.
+Runtime persistence now uses MongoDB via `backend/database/connection.py` and document schemas in `backend/database/models.py`.
 
-Current starting schema:
+Use this folder for future Mongo migration scripts, for example:
 
-- `backend/database/schema.sql`
+- one-time collection backfills
+- index changes beyond the startup indexes
+- SQL-to-Mongo export/import utilities

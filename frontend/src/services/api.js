@@ -50,8 +50,7 @@ export const api = {
   },
 
   async getUsers() {
-    await delay()
-    return users
+    return fetchJson('/users/', users)
   },
 
   async getDashboardStats(role) {

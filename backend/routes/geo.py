@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
+from pymongo.database import Database
 
 from backend.database.connection import get_db
 from backend.models.entities import GeoHotspot
@@ -10,5 +10,5 @@ router = APIRouter()
 
 
 @router.get("/hotspots", response_model=list[GeoHotspot])
-def list_hotspots(db: Session = Depends(get_db)) -> list[GeoHotspot]:
+def list_hotspots(db: Database = Depends(get_db)) -> list[GeoHotspot]:
     return GeospatialIntelligenceService().compute_hotspots(db)

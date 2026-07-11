@@ -1,132 +1,197 @@
+from __future__ import annotations
+
+from dataclasses import dataclass, field
 from datetime import datetime
+from typing import Any, ClassVar
 from uuid import uuid4
-
-from sqlalchemy import DateTime, Float, ForeignKey, Integer, JSON, String, Text
-from sqlalchemy.orm import Mapped, mapped_column
-
-from backend.database.connection import Base
 
 
 def make_uuid() -> str:
     return str(uuid4())
 
 
-class CitizenReportRecord(Base):
-    __tablename__ = "citizen_reports"
-
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=make_uuid)
-    channel: Mapped[str] = mapped_column(String(40), nullable=False)
-    description: Mapped[str] = mapped_column(Text, nullable=False)
-    language: Mapped[str] = mapped_column(String(12), default="en", nullable=False)
-    location: Mapped[str | None] = mapped_column(String(160))
-    amount: Mapped[float | None] = mapped_column(Float)
-    risk_score: Mapped[float | None] = mapped_column(Float)
-    incident_type: Mapped[str | None] = mapped_column(String(80))
-    status: Mapped[str] = mapped_column(String(40), default="submitted", nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+def utcnow() -> datetime:
+    return datetime.utcnow()
 
 
-class AlertRecord(Base):
-    __tablename__ = "alerts"
+@dataclass
+class MongoDocument:
+    id: str = field(default_factory=make_uuid)
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=make_uuid)
-    title: Mapped[str] = mapped_column(String(180), nullable=False)
-    severity: Mapped[str] = mapped_column(String(40), nullable=False)
-    source: Mapped[str] = mapped_column(String(80), nullable=False)
-    summary: Mapped[str] = mapped_column(Text, nullable=False)
-    region: Mapped[str | None] = mapped_column(String(120))
-    payload: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
-    status: Mapped[str] = mapped_column(String(40), default="open", nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+    collection_name: ClassVar[str] = ""
+    indexes: ClassVar[tuple[tuple[str, int], ...]] = ()
 
+    def to_mongo(self) -> dict[str, Any]:
+        data = self.__dict__.copy()
+        data.pop("collection_name", None)
+        data.pop("indexes", None)
+        data["_id"] = data.pop("id")
+        return data
 
-class ScamSessionRecord(Base):
-    __tablename__ = "scam_sessions"
-
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=make_uuid)
-    report_id: Mapped[str | None] = mapped_column(String(36), ForeignKey("citizen_reports.id"))
-    suspected_number: Mapped[str | None] = mapped_column(String(40))
-    risk_score: Mapped[float | None] = mapped_column(Float)
-    verdict: Mapped[str] = mapped_column(String(40), default="pending", nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+    @classmethod
+    def from_mongo(cls, data: dict[str, Any] | None):
+        if data is None:
+            return None
+        payload = data.copy()
+        payload["id"] = str(payload.pop("_id"))
+        return cls(**payload)
 
 
-class CounterfeitScanRecord(Base):
-    __tablename__ = "counterfeit_scans"
+@dataclass
+class CitizenReportRecord(MongoDocument):
+    channel: str = ""
+    description: str = ""
+    language: str = "en"
+    location: str | None = None
+    amount: float | None = None
+    risk_score: float | None = None
+    incident_type: str | None = None
+    status: str = "submitted"
+    created_at: datetime = field(default_factory=utcnow)
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=make_uuid)
-    denomination: Mapped[int] = mapped_column(Integer, nullable=False)
-    serial_number: Mapped[str | None] = mapped_column(String(32))
-    authenticity_score: Mapped[float | None] = mapped_column(Float)
-    verdict: Mapped[str] = mapped_column(String(40), default="pending", nullable=False)
-    image_uri: Mapped[str | None] = mapped_column(Text)
-    scanned_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
-
-
-class FraudGraphNodeRecord(Base):
-    __tablename__ = "fraud_graph_nodes"
-
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=make_uuid)
-    node_type: Mapped[str] = mapped_column(String(60), nullable=False)
-    label: Mapped[str] = mapped_column(String(160), nullable=False)
-    risk_score: Mapped[float | None] = mapped_column(Float)
-    x: Mapped[float | None] = mapped_column(Float)
-    y: Mapped[float | None] = mapped_column(Float)
-    attributes: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+    collection_name = "citizen_reports"
+    indexes = (("created_at", -1), ("status", 1), ("risk_score", -1))
 
 
-class FraudGraphEdgeRecord(Base):
-    __tablename__ = "fraud_graph_edges"
+@dataclass
+class AlertRecord(MongoDocument):
+    title: str = ""
+    severity: str = "low"
+    source: str = ""
+    summary: str = ""
+    region: str | None = None
+    payload: dict[str, Any] = field(default_factory=dict)
+    status: str = "open"
+    created_at: datetime = field(default_factory=utcnow)
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=make_uuid)
-    source_node_id: Mapped[str] = mapped_column(String(36), ForeignKey("fraud_graph_nodes.id"), nullable=False)
-    target_node_id: Mapped[str] = mapped_column(String(36), ForeignKey("fraud_graph_nodes.id"), nullable=False)
-    relationship_type: Mapped[str] = mapped_column(String(80), nullable=False)
-    confidence_score: Mapped[float | None] = mapped_column(Float)
-    evidence: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
-
-
-class GeoIncidentRecord(Base):
-    __tablename__ = "geo_incidents"
-
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=make_uuid)
-    incident_type: Mapped[str] = mapped_column(String(80), nullable=False)
-    latitude: Mapped[float] = mapped_column(Float, nullable=False)
-    longitude: Mapped[float] = mapped_column(Float, nullable=False)
-    district: Mapped[str | None] = mapped_column(String(120))
-    state: Mapped[str | None] = mapped_column(String(120))
-    risk_score: Mapped[float | None] = mapped_column(Float)
-    occurred_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+    collection_name = "alerts"
+    indexes = (("created_at", -1), ("status", 1), ("severity", 1))
 
 
-class TransactionEventRecord(Base):
-    __tablename__ = "transaction_events"
+@dataclass
+class ScamSessionRecord(MongoDocument):
+    report_id: str | None = None
+    suspected_number: str | None = None
+    risk_score: float | None = None
+    verdict: str = "pending"
+    created_at: datetime = field(default_factory=utcnow)
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=make_uuid)
-    account_id: Mapped[str] = mapped_column(String(80), nullable=False)
-    account_holder: Mapped[str | None] = mapped_column(String(160))
-    transaction_type: Mapped[str] = mapped_column(String(80), nullable=False)
-    amount: Mapped[float] = mapped_column(Float, nullable=False)
-    merchant: Mapped[str | None] = mapped_column(String(160))
-    location: Mapped[str | None] = mapped_column(String(120))
-    status: Mapped[str] = mapped_column(String(40), default="cleared", nullable=False)
-    risk_score: Mapped[float] = mapped_column(Float, default=0, nullable=False)
-    event_time: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
-    metadata_json: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+    collection_name = "scam_sessions"
+    indexes = (("created_at", -1), ("report_id", 1), ("suspected_number", 1))
 
 
-class ModelRunRecord(Base):
-    __tablename__ = "model_runs"
+@dataclass
+class CounterfeitScanRecord(MongoDocument):
+    denomination: int = 0
+    serial_number: str | None = None
+    authenticity_score: float | None = None
+    verdict: str = "pending"
+    image_uri: str | None = None
+    scanned_at: datetime = field(default_factory=utcnow)
 
-    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=make_uuid)
-    model_name: Mapped[str] = mapped_column(String(80), nullable=False)
-    model_type: Mapped[str] = mapped_column(String(80), nullable=False)
-    input_ref: Mapped[str | None] = mapped_column(String(120))
-    score: Mapped[float] = mapped_column(Float, nullable=False)
-    verdict: Mapped[str] = mapped_column(String(60), nullable=False)
-    features: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
+    collection_name = "counterfeit_scans"
+    indexes = (("scanned_at", -1), ("verdict", 1), ("serial_number", 1))
+
+
+@dataclass
+class FraudGraphNodeRecord(MongoDocument):
+    node_type: str = ""
+    label: str = ""
+    risk_score: float | None = None
+    x: float | None = None
+    y: float | None = None
+    attributes: dict[str, Any] = field(default_factory=dict)
+    created_at: datetime = field(default_factory=utcnow)
+
+    collection_name = "fraud_graph_nodes"
+    indexes = (("created_at", -1), ("label", 1), ("risk_score", -1))
+
+
+@dataclass
+class FraudGraphEdgeRecord(MongoDocument):
+    source_node_id: str = ""
+    target_node_id: str = ""
+    relationship_type: str = ""
+    confidence_score: float | None = None
+    evidence: dict[str, Any] = field(default_factory=dict)
+    created_at: datetime = field(default_factory=utcnow)
+
+    collection_name = "fraud_graph_edges"
+    indexes = (("created_at", -1), ("source_node_id", 1), ("target_node_id", 1))
+
+
+@dataclass
+class GeoIncidentRecord(MongoDocument):
+    incident_type: str = ""
+    latitude: float = 0
+    longitude: float = 0
+    district: str | None = None
+    state: str | None = None
+    risk_score: float | None = None
+    occurred_at: datetime = field(default_factory=utcnow)
+    created_at: datetime = field(default_factory=utcnow)
+
+    collection_name = "geo_incidents"
+    indexes = (("risk_score", -1), ("state", 1), ("created_at", -1))
+
+
+@dataclass
+class TransactionEventRecord(MongoDocument):
+    account_id: str = ""
+    account_holder: str | None = None
+    transaction_type: str = ""
+    amount: float = 0
+    merchant: str | None = None
+    location: str | None = None
+    status: str = "cleared"
+    risk_score: float = 0
+    event_time: datetime = field(default_factory=utcnow)
+    metadata_json: dict[str, Any] = field(default_factory=dict)
+    created_at: datetime = field(default_factory=utcnow)
+
+    collection_name = "transaction_events"
+    indexes = (("event_time", -1), ("risk_score", -1), ("status", 1), ("account_id", 1))
+
+
+@dataclass
+class ModelRunRecord(MongoDocument):
+    model_name: str = ""
+    model_type: str = ""
+    input_ref: str | None = None
+    score: float = 0
+    verdict: str = ""
+    features: dict[str, Any] = field(default_factory=dict)
+    created_at: datetime = field(default_factory=utcnow)
+
+    collection_name = "model_runs"
+    indexes = (("created_at", -1), ("model_type", 1), ("input_ref", 1))
+
+
+@dataclass
+class UserRecord(MongoDocument):
+    name: str = ""
+    email: str = ""
+    role: str = "citizen"
+    status: str = "active"
+    avatar: str | None = None
+    reports_count: int = 0
+    joined_at: datetime = field(default_factory=utcnow)
+    last_login: datetime | None = None
+    created_at: datetime = field(default_factory=utcnow)
+
+    collection_name = "users"
+    indexes = (("email", 1), ("role", 1), ("status", 1))
+
+
+DOCUMENT_MODELS = (
+    CitizenReportRecord,
+    AlertRecord,
+    ScamSessionRecord,
+    CounterfeitScanRecord,
+    FraudGraphNodeRecord,
+    FraudGraphEdgeRecord,
+    GeoIncidentRecord,
+    TransactionEventRecord,
+    ModelRunRecord,
+    UserRecord,
+)

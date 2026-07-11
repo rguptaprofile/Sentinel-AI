@@ -1,175 +1,150 @@
-from sqlalchemy import create_engine
-from sqlalchemy import inspect, text
-from sqlalchemy.orm import declarative_base, sessionmaker
+from __future__ import annotations
+
+from datetime import datetime
+from typing import Any, Iterable, Type
+
+from pymongo import ASCENDING, DESCENDING, MongoClient
+from pymongo.collection import Collection
+from pymongo.database import Database
 
 from backend.config.settings import settings
+from backend.database.models import (
+    DOCUMENT_MODELS,
+    AlertRecord,
+    CitizenReportRecord,
+    CounterfeitScanRecord,
+    FraudGraphNodeRecord,
+    GeoIncidentRecord,
+    ModelRunRecord,
+    MongoDocument,
+    TransactionEventRecord,
+    UserRecord,
+)
 
 
-connect_args = {"check_same_thread": False} if settings.database_url.startswith("sqlite") else {}
+client = MongoClient(settings.mongodb_url, serverSelectionTimeoutMS=settings.mongodb_timeout_ms)
+mongo_db: Database = client[settings.mongodb_db_name]
 
-engine = create_engine(settings.database_url, pool_pre_ping=True, connect_args=connect_args)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
+
+def collection_for(model: Type[MongoDocument]) -> Collection:
+    return mongo_db[model.collection_name]
 
 
 def init_db() -> None:
-    from backend.database import models  # noqa: F401
-
-    Base.metadata.create_all(bind=engine)
-    _ensure_sqlite_columns()
+    client.admin.command("ping")
+    _ensure_indexes()
     _seed_demo_data()
 
 
 def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+    yield mongo_db
 
 
-def _ensure_sqlite_columns() -> None:
-    if not settings.database_url.startswith("sqlite"):
+def insert_document(db: Database, document: MongoDocument) -> MongoDocument:
+    db[document.collection_name].insert_one(document.to_mongo())
+    return document
+
+
+def list_documents(
+    db: Database,
+    model: Type[MongoDocument],
+    *,
+    filter_query: dict[str, Any] | None = None,
+    sort: list[tuple[str, int]] | None = None,
+    limit: int | None = None,
+) -> list[MongoDocument]:
+    cursor = db[model.collection_name].find(filter_query or {})
+    if sort:
+        cursor = cursor.sort(sort)
+    if limit:
+        cursor = cursor.limit(limit)
+    return [model.from_mongo(row) for row in cursor]
+
+
+def count_documents(db: Database, model: Type[MongoDocument], filter_query: dict[str, Any] | None = None) -> int:
+    return db[model.collection_name].count_documents(filter_query or {})
+
+
+def _ensure_indexes() -> None:
+    directions = {-1: DESCENDING, 1: ASCENDING}
+    for model in DOCUMENT_MODELS:
+        for field_name, direction in model.indexes:
+            mongo_db[model.collection_name].create_index([(field_name, directions[direction])])
+
+
+def _insert_many_if_empty(model: Type[MongoDocument], documents: Iterable[MongoDocument]) -> None:
+    collection = collection_for(model)
+    if collection.count_documents({}) > 0:
         return
-    required_columns = {
-        "citizen_reports": {
-            "amount": "FLOAT",
-            "risk_score": "FLOAT",
-            "incident_type": "VARCHAR(80)",
-        },
-        "alerts": {
-            "region": "VARCHAR(120)",
-            "payload": "JSON DEFAULT '{}'",
-        },
-        "fraud_graph_nodes": {
-            "x": "FLOAT",
-            "y": "FLOAT",
-            "attributes": "JSON DEFAULT '{}'",
-        },
-    }
-    inspector = inspect(engine)
-    with engine.begin() as conn:
-        for table, columns in required_columns.items():
-            if not inspector.has_table(table):
-                continue
-            existing = {column["name"] for column in inspector.get_columns(table)}
-            for name, ddl in columns.items():
-                if name not in existing:
-                    conn.execute(text(f"ALTER TABLE {table} ADD COLUMN {name} {ddl}"))
+    collection.insert_many([document.to_mongo() for document in documents])
 
 
 def _seed_demo_data() -> None:
-    from datetime import datetime
-
-    from backend.database.models import (
-        AlertRecord,
+    _insert_many_if_empty(
         CitizenReportRecord,
-        CounterfeitScanRecord,
-        FraudGraphNodeRecord,
-        GeoIncidentRecord,
-        ModelRunRecord,
-        TransactionEventRecord,
+        [
+            CitizenReportRecord(channel="mobile_app", description="UPI collect request impersonating bank official", location="Mumbai, Maharashtra", amount=85000, risk_score=87, incident_type="UPI Scam", status="investigating"),
+            CitizenReportRecord(channel="ivr", description="AI-generated voice call claiming to be from Income Tax Department", location="Delhi NCR", amount=250000, risk_score=94, incident_type="Voice Phishing", status="investigating"),
+            CitizenReportRecord(channel="police_portal", description="Fake 500 notes detected at local market", location="Chennai, Tamil Nadu", amount=15000, risk_score=62, incident_type="Counterfeit Currency", status="active"),
+            CitizenReportRecord(channel="whatsapp", description="Fake crypto investment scheme via WhatsApp group", location="Bangalore, Karnataka", amount=500000, risk_score=89, incident_type="Investment Fraud", status="investigating"),
+            CitizenReportRecord(channel="mobile_app", description="Tampered QR code redirecting parking payments", location="Hyderabad, Telangana", amount=12000, risk_score=71, incident_type="QR Code Scam", status="active"),
+        ],
     )
-
-    db = SessionLocal()
-    try:
-        if db.query(CitizenReportRecord).count() == 0:
-            reports = [
-                ("mobile_app", "UPI collect request impersonating bank official", "Mumbai, Maharashtra", 85000, 87, "UPI Scam"),
-                ("ivr", "AI-generated voice call claiming to be from Income Tax Department", "Delhi NCR", 250000, 94, "Voice Phishing"),
-                ("police_portal", "Fake 500 notes detected at local market", "Chennai, Tamil Nadu", 15000, 62, "Counterfeit Currency"),
-                ("whatsapp", "Fake crypto investment scheme via WhatsApp group", "Bangalore, Karnataka", 500000, 89, "Investment Fraud"),
-                ("mobile_app", "Tampered QR code redirecting parking payments", "Hyderabad, Telangana", 12000, 71, "QR Code Scam"),
-            ]
-            for channel, description, location, amount, risk, incident_type in reports:
-                db.add(
-                    CitizenReportRecord(
-                        channel=channel,
-                        description=description,
-                        location=location,
-                        amount=amount,
-                        risk_score=risk,
-                        incident_type=incident_type,
-                        status="investigating" if risk >= 80 else "active",
-                    )
-                )
-
-        if db.query(TransactionEventRecord).count() == 0:
-            transactions = [
-                ("ACC-78234", "Rajesh Kumar", "UPI Transfer", 85000, "Unknown UPI ID", "Mumbai", "flagged", 92),
-                ("ACC-45123", "Priya Sharma", "NEFT", 250000, "Offshore Account", "Delhi", "blocked", 98),
-                ("ACC-91234", "Ananya Reddy", "Wire Transfer", 500000, "Crypto Exchange", "Bangalore", "under_review", 85),
-                ("ACC-33456", "Vikram Rao", "UPI Transfer", 12000, "Parking QR", "Hyderabad", "flagged", 74),
-                ("ACC-12345", "Kiran Patel", "Debit Card", 5500, "Amazon India", "Ahmedabad", "cleared", 12),
-            ]
-            for account_id, holder, txn_type, amount, merchant, location, status, risk in transactions:
-                db.add(
-                    TransactionEventRecord(
-                        account_id=account_id,
-                        account_holder=holder,
-                        transaction_type=txn_type,
-                        amount=amount,
-                        merchant=merchant,
-                        location=location,
-                        status=status,
-                        risk_score=risk,
-                        event_time=datetime.utcnow(),
-                    )
-                )
-
-        if db.query(GeoIncidentRecord).count() == 0:
-            hotspots = [
-                (19.076, 72.8777, "Mumbai", "Maharashtra", 0.95),
-                (28.6139, 77.209, "Delhi", "Delhi", 0.98),
-                (12.9716, 77.5946, "Bangalore", "Karnataka", 0.82),
-                (13.0827, 80.2707, "Chennai", "Tamil Nadu", 0.71),
-                (17.385, 78.4867, "Hyderabad", "Telangana", 0.68),
-            ]
-            for lat, lng, district, state, risk in hotspots:
-                db.add(
-                    GeoIncidentRecord(
-                        incident_type="digital_fraud",
-                        latitude=lat,
-                        longitude=lng,
-                        district=district,
-                        state=state,
-                        risk_score=risk,
-                    )
-                )
-
-        if db.query(FraudGraphNodeRecord).count() == 0:
-            nodes = [
-                ("suspect", "Scammer A", 0.95, 400, 200),
-                ("account", "UPI mule-7823", 0.88, 250, 150),
-                ("account", "UPI mule-4512", 0.82, 550, 150),
-                ("phone", "Phone +91-98xxx", 0.76, 400, 80),
-                ("victim", "Victim Cluster", 0.30, 400, 350),
-            ]
-            for node_type, label, risk, x, y in nodes:
-                db.add(FraudGraphNodeRecord(node_type=node_type, label=label, risk_score=risk, x=x, y=y))
-
-        if db.query(AlertRecord).count() == 0:
-            alerts = [
-                ("Critical: AI Voice Scam Surge", "critical", "speech_ai", "47 new voice phishing reports in Delhi NCR", "Delhi NCR"),
-                ("Counterfeit Alert: 500 Notes", "medium", "computer_vision", "Cluster of counterfeit currency reports in Chennai markets", "Tamil Nadu"),
-                ("Fraud Network Detected", "high", "graph_ai", "AI identified connected fraud ring across 3 states", "Multi-State"),
-            ]
-            for title, severity, source, summary, region in alerts:
-                db.add(AlertRecord(title=title, severity=severity, source=source, summary=summary, region=region))
-
-        if db.query(CounterfeitScanRecord).count() == 0:
-            db.add(CounterfeitScanRecord(denomination=500, serial_number="XX7391", authenticity_score=0.31, verdict="likely_counterfeit"))
-
-        if db.query(ModelRunRecord).count() == 0:
-            for name, model_type, score in [
-                ("vision_counterfeit_v1", "computer_vision", 0.69),
-                ("nlp_scam_script_v1", "nlp_llm", 0.83),
-                ("speech_spoofing_v1", "speech_ai", 0.78),
-                ("graph_fraud_ring_v1", "graph_ai", 0.86),
-                ("geo_hotspot_v1", "geospatial_intelligence", 0.74),
-            ]:
-                db.add(ModelRunRecord(model_name=name, model_type=model_type, score=score, verdict="ready", features={"seed": True}))
-
-        db.commit()
-    finally:
-        db.close()
+    _insert_many_if_empty(
+        TransactionEventRecord,
+        [
+            TransactionEventRecord(account_id="ACC-78234", account_holder="Rajesh Kumar", transaction_type="UPI Transfer", amount=85000, merchant="Unknown UPI ID", location="Mumbai", status="flagged", risk_score=92, event_time=datetime.utcnow()),
+            TransactionEventRecord(account_id="ACC-45123", account_holder="Priya Sharma", transaction_type="NEFT", amount=250000, merchant="Offshore Account", location="Delhi", status="blocked", risk_score=98, event_time=datetime.utcnow()),
+            TransactionEventRecord(account_id="ACC-91234", account_holder="Ananya Reddy", transaction_type="Wire Transfer", amount=500000, merchant="Crypto Exchange", location="Bangalore", status="under_review", risk_score=85, event_time=datetime.utcnow()),
+            TransactionEventRecord(account_id="ACC-33456", account_holder="Vikram Rao", transaction_type="UPI Transfer", amount=12000, merchant="Parking QR", location="Hyderabad", status="flagged", risk_score=74, event_time=datetime.utcnow()),
+            TransactionEventRecord(account_id="ACC-12345", account_holder="Kiran Patel", transaction_type="Debit Card", amount=5500, merchant="Amazon India", location="Ahmedabad", status="cleared", risk_score=12, event_time=datetime.utcnow()),
+        ],
+    )
+    _insert_many_if_empty(
+        GeoIncidentRecord,
+        [
+            GeoIncidentRecord(incident_type="digital_fraud", latitude=19.076, longitude=72.8777, district="Mumbai", state="Maharashtra", risk_score=0.95),
+            GeoIncidentRecord(incident_type="digital_fraud", latitude=28.6139, longitude=77.209, district="Delhi", state="Delhi", risk_score=0.98),
+            GeoIncidentRecord(incident_type="digital_fraud", latitude=12.9716, longitude=77.5946, district="Bangalore", state="Karnataka", risk_score=0.82),
+            GeoIncidentRecord(incident_type="digital_fraud", latitude=13.0827, longitude=80.2707, district="Chennai", state="Tamil Nadu", risk_score=0.71),
+            GeoIncidentRecord(incident_type="digital_fraud", latitude=17.385, longitude=78.4867, district="Hyderabad", state="Telangana", risk_score=0.68),
+        ],
+    )
+    _insert_many_if_empty(
+        FraudGraphNodeRecord,
+        [
+            FraudGraphNodeRecord(node_type="suspect", label="Scammer A", risk_score=0.95, x=400, y=200),
+            FraudGraphNodeRecord(node_type="account", label="UPI mule-7823", risk_score=0.88, x=250, y=150),
+            FraudGraphNodeRecord(node_type="account", label="UPI mule-4512", risk_score=0.82, x=550, y=150),
+            FraudGraphNodeRecord(node_type="phone", label="Phone +91-98xxx", risk_score=0.76, x=400, y=80),
+            FraudGraphNodeRecord(node_type="victim", label="Victim Cluster", risk_score=0.30, x=400, y=350),
+        ],
+    )
+    _insert_many_if_empty(
+        AlertRecord,
+        [
+            AlertRecord(title="Critical: AI Voice Scam Surge", severity="critical", source="speech_ai", summary="47 new voice phishing reports in Delhi NCR", region="Delhi NCR"),
+            AlertRecord(title="Counterfeit Alert: 500 Notes", severity="medium", source="computer_vision", summary="Cluster of counterfeit currency reports in Chennai markets", region="Tamil Nadu"),
+            AlertRecord(title="Fraud Network Detected", severity="high", source="graph_ai", summary="AI identified connected fraud ring across 3 states", region="Multi-State"),
+        ],
+    )
+    _insert_many_if_empty(CounterfeitScanRecord, [CounterfeitScanRecord(denomination=500, serial_number="XX7391", authenticity_score=0.31, verdict="likely_counterfeit")])
+    _insert_many_if_empty(
+        ModelRunRecord,
+        [
+            ModelRunRecord(model_name="vision_counterfeit_v1", model_type="computer_vision", score=0.69, verdict="ready", features={"seed": True}),
+            ModelRunRecord(model_name="nlp_scam_script_v1", model_type="nlp_llm", score=0.83, verdict="ready", features={"seed": True}),
+            ModelRunRecord(model_name="speech_spoofing_v1", model_type="speech_ai", score=0.78, verdict="ready", features={"seed": True}),
+            ModelRunRecord(model_name="graph_fraud_ring_v1", model_type="graph_ai", score=0.86, verdict="ready", features={"seed": True}),
+            ModelRunRecord(model_name="geo_hotspot_v1", model_type="geospatial_intelligence", score=0.74, verdict="ready", features={"seed": True}),
+        ],
+    )
+    _insert_many_if_empty(
+        UserRecord,
+        [
+            UserRecord(name="Rajesh Kumar", email="rajesh.kumar@email.com", role="citizen", status="active", reports_count=3),
+            UserRecord(name="Inspector Sharma", email="sharma@police.gov.in", role="police", status="active"),
+            UserRecord(name="HDFC Fraud Team", email="fraud@hdfcbank.com", role="bank", status="active"),
+            UserRecord(name="System Admin", email="admin@sentinelai.gov.in", role="admin", status="active"),
+        ],
+    )

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
+from pymongo.database import Database
 
 from backend.database.connection import get_db
 from backend.models.entities import IntelligenceFusionRequest, IntelligenceFusionResponse, ModelSignal
@@ -12,7 +12,7 @@ router = APIRouter()
 @router.post("/fusion/analyze", response_model=IntelligenceFusionResponse, status_code=201)
 def analyze_intelligence(
     payload: IntelligenceFusionRequest,
-    db: Session = Depends(get_db),
+    db: Database = Depends(get_db),
 ) -> IntelligenceFusionResponse:
     result = IntelligenceFusionService().analyze(db, payload.model_dump())
     return IntelligenceFusionResponse(

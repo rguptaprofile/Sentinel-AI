@@ -1,5 +1,6 @@
-from sqlalchemy.orm import Session
+from pymongo.database import Database
 
+from backend.database.connection import insert_document
 from backend.database.models import AlertRecord, FraudGraphNodeRecord, ModelRunRecord
 from backend.services.ai_models import AgenticFusionModel, ModelSignal
 
@@ -8,7 +9,7 @@ class IntelligenceFusionService:
     def __init__(self) -> None:
         self.fusion_model = AgenticFusionModel()
 
-    def analyze(self, db: Session, payload: dict) -> dict:
+    def analyze(self, db: Database, payload: dict) -> dict:
         result = self.fusion_model.analyze(payload)
         for signal in result["signals"]:
             self._store_model_run(db, signal, payload)
@@ -27,16 +28,15 @@ class IntelligenceFusionService:
                     "signals": [signal.__dict__ for signal in result["signals"]],
                 },
             )
-            db.add(alert)
-            db.flush()
+            insert_document(db, alert)
             alert_id = alert.id
             self._upsert_graph_node(db, payload, result["risk_score"])
 
-        db.commit()
         return {**result, "alert_id": alert_id}
 
-    def _store_model_run(self, db: Session, signal: ModelSignal, payload: dict) -> None:
-        db.add(
+    def _store_model_run(self, db: Database, signal: ModelSignal, payload: dict) -> None:
+        insert_document(
+            db,
             ModelRunRecord(
                 model_name=signal.model_name,
                 model_type=signal.model_type,
@@ -47,13 +47,15 @@ class IntelligenceFusionService:
             )
         )
 
-    def _upsert_graph_node(self, db: Session, payload: dict, risk_score: float) -> None:
+    def _upsert_graph_node(self, db: Database, payload: dict, risk_score: float) -> None:
         label = payload.get("suspected_number") or payload.get("transaction_id") or "Fused threat cluster"
-        exists = db.query(FraudGraphNodeRecord).filter(FraudGraphNodeRecord.label == label).first()
+        collection = db[FraudGraphNodeRecord.collection_name]
+        exists = collection.find_one({"label": label})
         if exists:
-            exists.risk_score = max(exists.risk_score or 0, risk_score)
+            collection.update_one({"_id": exists["_id"]}, {"$max": {"risk_score": risk_score}})
             return
-        db.add(
+        insert_document(
+            db,
             FraudGraphNodeRecord(
                 node_type="suspect" if payload.get("suspected_number") else "case",
                 label=label,

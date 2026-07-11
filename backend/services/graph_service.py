@@ -1,11 +1,12 @@
-from sqlalchemy.orm import Session
+from pymongo.database import Database
 
+from backend.database.connection import list_documents
 from backend.database.models import FraudGraphNodeRecord
 
 
 class FraudGraphService:
-    def build_network_snapshot(self, db: Session) -> dict:
-        nodes = db.query(FraudGraphNodeRecord).order_by(FraudGraphNodeRecord.created_at.desc()).all()
+    def build_network_snapshot(self, db: Database) -> dict:
+        nodes = list_documents(db, FraudGraphNodeRecord, sort=[("created_at", -1)])
         return {
             "nodes": [
                 {
