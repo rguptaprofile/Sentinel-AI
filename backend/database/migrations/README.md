@@ -6,4 +6,4 @@ Use this folder for future Mongo migration scripts, for example:
 
 - one-time collection backfills
 - index changes beyond the startup indexes
-- SQL-to-Mongo export/import utilities
+- legacy relational-data export/import utilities

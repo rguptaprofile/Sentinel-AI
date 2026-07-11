@@ -34,7 +34,7 @@ const aiModels = [
 ]
 
 const dbStatus = [
-  { name: 'Primary PostgreSQL', status: 'healthy', latency: '2ms', connections: '847/1000' },
+  { name: 'Primary MongoDB', status: 'healthy', latency: '2ms', connections: 'sentinelai database' },
   { name: 'Redis Cache Cluster', status: 'healthy', latency: '0.3ms', connections: '12/16 nodes' },
   { name: 'Elasticsearch', status: 'healthy', latency: '15ms', connections: '2.1M docs' },
   { name: 'Graph Database (Neo4j)', status: 'degraded', latency: '45ms', connections: '12.4M nodes' },
