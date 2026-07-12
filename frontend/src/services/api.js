@@ -1,4 +1,17 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api/v1'
+function resolveApiBase() {
+  const configuredBase = import.meta.env.VITE_API_BASE_URL
+  if (configuredBase) {
+    return configuredBase.replace(/\/$/, '')
+  }
+
+  if (import.meta.env.PROD && typeof window !== 'undefined') {
+    return `${window.location.origin}/api/v1`
+  }
+
+  return 'http://127.0.0.1:8000/api/v1'
+}
+
+const API_BASE = resolveApiBase()
 
 function getAuthToken() {
   return localStorage.getItem('sentinelai_token')
