@@ -22,22 +22,32 @@ from backend.database.models import (
 )
 
 
-client = MongoClient(settings.mongodb_url, serverSelectionTimeoutMS=settings.mongodb_timeout_ms)
-mongo_db: Database = client[settings.mongodb_db_name]
+_client: MongoClient | None = None
+
+
+def get_client() -> MongoClient:
+    global _client
+    if _client is None:
+        _client = MongoClient(settings.mongodb_url, serverSelectionTimeoutMS=settings.mongodb_timeout_ms)
+    return _client
+
+
+def get_database() -> Database:
+    return get_client()[settings.mongodb_db_name]
 
 
 def collection_for(model: Type[MongoDocument]) -> Collection:
-    return mongo_db[model.collection_name]
+    return get_database()[model.collection_name]
 
 
 def init_db() -> None:
-    client.admin.command("ping")
+    get_client().admin.command("ping")
     _ensure_indexes()
     _seed_demo_data()
 
 
 def get_db():
-    yield mongo_db
+    yield get_database()
 
 
 def insert_document(db: Database, document: MongoDocument) -> MongoDocument:
@@ -67,9 +77,10 @@ def count_documents(db: Database, model: Type[MongoDocument], filter_query: dict
 
 def _ensure_indexes() -> None:
     directions = {-1: DESCENDING, 1: ASCENDING}
+    db = get_database()
     for model in DOCUMENT_MODELS:
         for field_name, direction in model.indexes:
-            mongo_db[model.collection_name].create_index([(field_name, directions[direction])])
+            db[model.collection_name].create_index([(field_name, directions[direction])])
 
 
 def _insert_many_if_empty(model: Type[MongoDocument], documents: Iterable[MongoDocument]) -> None:

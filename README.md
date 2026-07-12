@@ -47,3 +47,28 @@ Useful URLs:
 - Backend health: `http://127.0.0.1:8000/health`
 - Backend API docs: `http://127.0.0.1:8000/docs`
 - API base URL used by frontend: `http://127.0.0.1:8000/api/v1`
+
+## Production Setup
+
+Production frontend is hosted at:
+
+```text
+https://sentinel-in.vercel.app
+```
+
+The Vercel frontend cannot call `127.0.0.1` or `localhost` in production. Deploy the FastAPI backend to a public HTTPS host, then set this Vercel environment variable:
+
+```text
+VITE_API_BASE_URL=https://<your-backend-domain>/api/v1
+```
+
+Set backend environment variables on your backend host:
+
+```text
+APP_ENV=production
+MONGODB_URL=mongodb+srv://<username>:<url-encoded-password>@<cluster-host>/<database-name>?retryWrites=true&w=majority
+MONGODB_DB_NAME=sentinel-ai
+CORS_ORIGINS=["https://sentinel-in.vercel.app"]
+```
+
+MongoDB passwords must be URL-encoded inside `MONGODB_URL`. For example, `#` becomes `%23` and `@` becomes `%40`.

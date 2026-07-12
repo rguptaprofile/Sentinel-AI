@@ -15,16 +15,28 @@ AI-Powered Digital Public Safety Intelligence Platform: a React dashboard for ci
 
 ## Backend/API Setup
 
-The frontend reads live data from the FastAPI backend. By default it calls:
+The frontend reads live data from the FastAPI backend. In local development it defaults to:
 
 ```text
 http://127.0.0.1:8000/api/v1
 ```
 
-You can override this with `VITE_API_BASE_URL`:
+You can override this with `VITE_API_BASE_URL` from the root `.env` or from your hosting provider:
 
 ```powershell
 VITE_API_BASE_URL=http://127.0.0.1:8000/api/v1
+```
+
+Production frontend runs at:
+
+```text
+https://sentinel-in.vercel.app
+```
+
+In Vercel, set `VITE_API_BASE_URL` to your deployed backend API, for example:
+
+```text
+https://<your-backend-domain>/api/v1
 ```
 
 MongoDB-backed API data includes dashboard stats, fraud reports, alerts, transactions, heatmap, chart data, network graph, users, citizen reports, scam classification, counterfeit scans, and intelligence fusion analysis.

@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^7.5.0"
+  },
+  "name": "sentinel-ai",
+  "version": "1.0.0",
+  "description": "SentinelAI is a scaffold for an AI-powered Digital Public Safety Intelligence platform focused on:",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rguptaprofile/Sentinel-AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rguptaprofile/Sentinel-AI/issues"
+  },
+  "homepage": "https://github.com/rguptaprofile/Sentinel-AI#readme"
+}

@@ -13,7 +13,6 @@ out/
 # Environment
 .env
 .env.*
-!.env.example
 *.db
 *.sqlite
 *.sqlite3

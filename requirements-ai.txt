@@ -1,0 +1,15 @@
+# Optional heavy AI training dependencies.
+# Keep backend/requirements.txt small for API runtime; install this only on training machines.
+pandas
+numpy
+scikit-learn
+joblib
+networkx
+opencv-python
+ultralytics
+torch
+torchvision
+librosa
+soundfile
+shapely
+geopy

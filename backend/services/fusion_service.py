@@ -1,5 +1,6 @@
 from pymongo.database import Database
 
+from backend.alerts.notifier import AlertNotifier
 from backend.database.connection import insert_document
 from backend.database.models import AlertRecord, FraudGraphNodeRecord, ModelRunRecord
 from backend.services.ai_models import AgenticFusionModel, ModelSignal
@@ -30,6 +31,8 @@ class IntelligenceFusionService:
             )
             insert_document(db, alert)
             alert_id = alert.id
+            submission = AlertNotifier().send({"id": alert.id, "title": alert.title, "severity": alert.severity, "summary": alert.summary, "region": alert.region})
+            db[AlertRecord.collection_name].update_one({"_id": alert.id}, {"$set": {"payload.external_submission": submission}})
             self._upsert_graph_node(db, payload, result["risk_score"])
 
         return {**result, "alert_id": alert_id}

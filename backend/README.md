@@ -9,15 +9,18 @@ FastAPI backend for SentinelAI. Runtime persistence uses MongoDB.
 
 ## Environment
 
-Copy `backend/.env.example` to `.env` at the repo root or export the same variables:
+Store backend secrets in the root `.env` file. Do not commit `.env`.
 
 ```powershell
-APP_ENV=development
+APP_ENV=production
 API_PREFIX=/api/v1
-MONGODB_URL=mongodb://localhost:27017
-MONGODB_DB_NAME=sentinelai
-MONGODB_TIMEOUT_MS=5000
+MONGODB_URL=mongodb+srv://<username>:<url-encoded-password>@<cluster-host>/<database-name>?retryWrites=true&w=majority
+MONGODB_DB_NAME=sentinel-ai
+MONGODB_TIMEOUT_MS=10000
+CORS_ORIGINS=["https://sentinel-in.vercel.app"]
 ```
+
+For local development you can use `MONGODB_URL=mongodb://localhost:27017` and add `http://127.0.0.1:5173` to `CORS_ORIGINS`.
 
 ## Install
 
