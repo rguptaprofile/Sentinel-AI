@@ -72,3 +72,5 @@ CORS_ORIGINS=["https://sentinel-in.vercel.app"]
 ```
 
 MongoDB passwords must be URL-encoded inside `MONGODB_URL`. For example, `#` becomes `%23` and `@` becomes `%40`.
+
+See `docs/PRODUCTION_SETUP.md` for the exact Vercel frontend -> FastAPI backend -> MongoDB Atlas setup.
