@@ -20,13 +20,23 @@ export default function LoginPage() {
   const [selectedRole, setSelectedRole] = useState('citizen')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [submitting, setSubmitting] = useState(false)
   const { login } = useAuth()
   const navigate = useNavigate()
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault()
-    const route = login(selectedRole, email)
-    navigate(route)
+    setSubmitting(true)
+    setError('')
+    try {
+      const route = await login(selectedRole, email, password)
+      navigate(route)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -114,8 +124,9 @@ export default function LoginPage() {
                     <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="pl-9" placeholder="Enter your password" autoComplete="current-password" required />
                   </div>
                 </div>
+                {error && <p className="text-sm text-destructive" role="alert">{error}</p>}
                 <Button type="submit" variant="gradient" className="w-full" size="lg">
-                  Sign in as {roles.find((r) => r.id === selectedRole)?.label}
+                  {submitting ? 'Signing in...' : `Sign in as ${roles.find((r) => r.id === selectedRole)?.label}`}
                 </Button>
               </form>
 

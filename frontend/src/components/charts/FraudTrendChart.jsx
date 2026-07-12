@@ -1,10 +1,9 @@
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import fallbackChartData from '@/services/data/chartData.json'
 import { useChartData } from '@/hooks/useDashboardData'
 
 export default function FraudTrendChart() {
   const { chartData } = useChartData()
-  const data = chartData?.fraudTrend?.length ? chartData.fraudTrend : fallbackChartData.fraudTrend
+  const data = chartData?.fraudTrend?.length ? chartData.fraudTrend : []
 
   return (
     <ResponsiveContainer width="100%" height={280}>

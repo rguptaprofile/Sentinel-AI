@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import fallbackNetworkGraph from '@/services/data/networkGraph.json'
 import api from '@/services/api'
 
 const nodeColors = {
@@ -12,14 +11,14 @@ const nodeColors = {
 }
 
 export default function FraudNetworkGraph() {
-  const [graph, setGraph] = useState(fallbackNetworkGraph)
+  const [graph, setGraph] = useState({ nodes: [], edges: [] })
   const { nodes, edges } = graph
   const width = 700
   const height = 400
 
   useEffect(() => {
     api.getNetworkGraph().then((data) => {
-      if (data?.nodes?.length) setGraph(data)
+      setGraph(data?.nodes?.length ? data : { nodes: [], edges: [] })
     })
   }, [])
 

@@ -20,17 +20,27 @@ export default function SignUpPage() {
   const [selectedRole, setSelectedRole] = useState('citizen')
   const [form, setForm] = useState({ name: '', email: '', password: '', confirmPassword: '' })
   const [error, setError] = useState('')
-  const { login } = useAuth()
+  const [submitting, setSubmitting] = useState(false)
+  const { signup } = useAuth()
   const navigate = useNavigate()
 
   const updateField = (field) => (event) => setForm((current) => ({ ...current, [field]: event.target.value }))
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     if (form.password !== form.confirmPassword) {
       setError('Passwords do not match.')
       return
     }
-    navigate(login(selectedRole, form.email, form.name))
+    setSubmitting(true)
+    setError('')
+    try {
+      const route = await signup(selectedRole, form.name, form.email, form.password)
+      navigate(route)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -66,7 +76,7 @@ export default function SignUpPage() {
                 <div className="space-y-2"><Label htmlFor="confirm-password">Confirm password</Label><Input id="confirm-password" type="password" value={form.confirmPassword} onChange={updateField('confirmPassword')} placeholder="Repeat password" minLength="8" autoComplete="new-password" required /></div>
               </div>
               {error && <p className="text-sm text-destructive" role="alert">{error}</p>}
-              <Button type="submit" variant="gradient" className="w-full" size="lg">Create account</Button>
+              <Button type="submit" variant="gradient" className="w-full" size="lg">{submitting ? 'Creating account...' : 'Create account'}</Button>
             </form>
             <p className="mt-6 text-center text-sm text-muted-foreground">Already have an account? <Link to="/login" className="font-medium text-primary hover:underline">Sign in</Link></p>
           </CardContent>

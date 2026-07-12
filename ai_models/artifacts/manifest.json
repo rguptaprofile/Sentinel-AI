@@ -1,0 +1,44 @@
+{
+  "models": {
+    "digital_arrest_scam": {
+      "artifact": "E:\\Sentinel-AI\\ai_models\\artifacts\\digital_arrest_scam_synthetic_baseline.json",
+      "trained_at": "2026-07-12T15:33:13.835894Z",
+      "metrics": {
+        "synthetic_accuracy_estimate": 0.86
+      },
+      "synthetic": true
+    },
+    "counterfeit_currency": {
+      "artifact": "E:\\Sentinel-AI\\ai_models\\artifacts\\counterfeit_currency_synthetic_baseline.json",
+      "trained_at": "2026-07-12T15:33:13.855787Z",
+      "metrics": {
+        "synthetic_accuracy_estimate": 0.82
+      },
+      "synthetic": true
+    },
+    "fraud_graph": {
+      "artifact": "E:\\Sentinel-AI\\ai_models\\artifacts\\fraud_graph_synthetic_baseline.json",
+      "trained_at": "2026-07-12T15:33:13.883190Z",
+      "metrics": {
+        "synthetic_clusters": 24
+      },
+      "synthetic": true
+    },
+    "geospatial_crime": {
+      "artifact": "E:\\Sentinel-AI\\ai_models\\artifacts\\geospatial_crime_synthetic_baseline.json",
+      "trained_at": "2026-07-12T15:33:13.909333Z",
+      "metrics": {
+        "synthetic_hotspots": 4
+      },
+      "synthetic": true
+    },
+    "citizen_fraud_shield": {
+      "artifact": "E:\\Sentinel-AI\\ai_models\\artifacts\\citizen_fraud_shield_synthetic_baseline.json",
+      "trained_at": "2026-07-12T15:33:13.932819Z",
+      "metrics": {
+        "synthetic_accuracy_estimate": 0.84
+      },
+      "synthetic": true
+    }
+  }
+}

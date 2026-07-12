@@ -1,0 +1,501 @@
+text,label,language,channel
+urgent payment request otp verify,scam,ml,ivr
+normal support acknowledgement,benign,en,mobile_app
+urgent payment request otp verify,scam,kn,whatsapp
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,as,ivr
+urgent payment request otp verify,scam,te,whatsapp
+normal support acknowledgement,benign,or,mobile_app
+urgent payment request otp verify,scam,hi,mobile_app
+normal support acknowledgement,benign,pa,ivr
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,bn,ivr
+urgent payment request otp verify,scam,hi,whatsapp
+normal support acknowledgement,benign,en,whatsapp
+urgent payment request otp verify,scam,te,whatsapp
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,bn,mobile_app
+normal support acknowledgement,benign,or,mobile_app
+urgent payment request otp verify,scam,ta,mobile_app
+normal support acknowledgement,benign,bn,ivr
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,en,ivr
+urgent payment request otp verify,scam,ml,whatsapp
+normal support acknowledgement,benign,ta,mobile_app
+urgent payment request otp verify,scam,bn,ivr
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,gu,mobile_app
+normal support acknowledgement,benign,mr,whatsapp
+urgent payment request otp verify,scam,en,mobile_app
+normal support acknowledgement,benign,mr,mobile_app
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,bn,mobile_app
+normal support acknowledgement,benign,bn,mobile_app
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,hi,whatsapp
+urgent payment request otp verify,scam,en,ivr
+normal support acknowledgement,benign,en,mobile_app
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,en,ivr
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,as,whatsapp
+normal support acknowledgement,benign,ta,mobile_app
+urgent payment request otp verify,scam,ml,whatsapp
+normal support acknowledgement,benign,or,whatsapp
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,mr,whatsapp
+urgent payment request otp verify,scam,pa,ivr
+normal support acknowledgement,benign,bn,mobile_app
+urgent payment request otp verify,scam,or,whatsapp
+normal support acknowledgement,benign,en,mobile_app
+urgent payment request otp verify,scam,en,ivr
+normal support acknowledgement,benign,te,ivr
+urgent payment request otp verify,scam,bn,whatsapp
+normal support acknowledgement,benign,ta,whatsapp
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,kn,mobile_app
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,hi,whatsapp
+urgent payment request otp verify,scam,or,mobile_app
+normal support acknowledgement,benign,ml,whatsapp
+urgent payment request otp verify,scam,mr,whatsapp
+normal support acknowledgement,benign,mr,mobile_app
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,ta,ivr
+normal support acknowledgement,benign,as,whatsapp
+urgent payment request otp verify,scam,hi,whatsapp
+normal support acknowledgement,benign,mr,mobile_app
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,hi,ivr
+urgent payment request otp verify,scam,hi,ivr
+normal support acknowledgement,benign,ta,whatsapp
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,ta,ivr
+normal support acknowledgement,benign,or,whatsapp
+urgent payment request otp verify,scam,gu,whatsapp
+normal support acknowledgement,benign,bn,mobile_app
+urgent payment request otp verify,scam,te,whatsapp
+normal support acknowledgement,benign,bn,whatsapp
+urgent payment request otp verify,scam,gu,ivr
+normal support acknowledgement,benign,mr,mobile_app
+urgent payment request otp verify,scam,or,whatsapp
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,ta,whatsapp
+normal support acknowledgement,benign,te,ivr
+urgent payment request otp verify,scam,ta,ivr
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,pa,whatsapp
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,as,ivr
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,ml,mobile_app
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,ml,ivr
+normal support acknowledgement,benign,hi,ivr
+urgent payment request otp verify,scam,kn,mobile_app
+normal support acknowledgement,benign,hi,mobile_app
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,te,mobile_app
+urgent payment request otp verify,scam,or,whatsapp
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,en,ivr
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,ml,ivr
+normal support acknowledgement,benign,gu,whatsapp
+urgent payment request otp verify,scam,or,mobile_app
+normal support acknowledgement,benign,kn,mobile_app
+urgent payment request otp verify,scam,gu,ivr
+normal support acknowledgement,benign,as,mobile_app
+urgent payment request otp verify,scam,or,mobile_app
+normal support acknowledgement,benign,bn,whatsapp
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,or,mobile_app
+urgent payment request otp verify,scam,te,ivr
+normal support acknowledgement,benign,mr,whatsapp
+urgent payment request otp verify,scam,hi,whatsapp
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,or,mobile_app
+normal support acknowledgement,benign,pa,mobile_app
+urgent payment request otp verify,scam,or,whatsapp
+normal support acknowledgement,benign,ml,ivr
+urgent payment request otp verify,scam,or,mobile_app
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,ml,whatsapp
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,bn,mobile_app
+urgent payment request otp verify,scam,as,ivr
+normal support acknowledgement,benign,or,whatsapp
+urgent payment request otp verify,scam,ml,mobile_app
+normal support acknowledgement,benign,gu,mobile_app
+urgent payment request otp verify,scam,as,whatsapp
+normal support acknowledgement,benign,pa,ivr
+urgent payment request otp verify,scam,ta,mobile_app
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,bn,whatsapp
+normal support acknowledgement,benign,gu,mobile_app
+urgent payment request otp verify,scam,ta,ivr
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,bn,whatsapp
+urgent payment request otp verify,scam,mr,whatsapp
+normal support acknowledgement,benign,or,ivr
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,ta,mobile_app
+urgent payment request otp verify,scam,gu,whatsapp
+normal support acknowledgement,benign,or,ivr
+urgent payment request otp verify,scam,ta,whatsapp
+normal support acknowledgement,benign,bn,mobile_app
+urgent payment request otp verify,scam,pa,ivr
+normal support acknowledgement,benign,ml,whatsapp
+urgent payment request otp verify,scam,en,mobile_app
+normal support acknowledgement,benign,te,ivr
+urgent payment request otp verify,scam,or,ivr
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,as,whatsapp
+normal support acknowledgement,benign,mr,whatsapp
+urgent payment request otp verify,scam,bn,mobile_app
+normal support acknowledgement,benign,ta,ivr
+urgent payment request otp verify,scam,ta,whatsapp
+normal support acknowledgement,benign,or,mobile_app
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,or,ivr
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,hi,mobile_app
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,ml,mobile_app
+urgent payment request otp verify,scam,hi,mobile_app
+normal support acknowledgement,benign,mr,whatsapp
+urgent payment request otp verify,scam,ta,ivr
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,bn,mobile_app
+normal support acknowledgement,benign,or,whatsapp
+urgent payment request otp verify,scam,ta,ivr
+normal support acknowledgement,benign,ta,mobile_app
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,hi,ivr
+urgent payment request otp verify,scam,hi,ivr
+normal support acknowledgement,benign,ml,mobile_app
+urgent payment request otp verify,scam,en,ivr
+normal support acknowledgement,benign,ml,ivr
+urgent payment request otp verify,scam,kn,whatsapp
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,pa,ivr
+urgent payment request otp verify,scam,gu,whatsapp
+normal support acknowledgement,benign,mr,mobile_app
+urgent payment request otp verify,scam,pa,ivr
+normal support acknowledgement,benign,bn,mobile_app
+urgent payment request otp verify,scam,gu,mobile_app
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,mr,whatsapp
+normal support acknowledgement,benign,gu,whatsapp
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,or,ivr
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,hi,whatsapp
+urgent payment request otp verify,scam,kn,mobile_app
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,kn,whatsapp
+normal support acknowledgement,benign,hi,ivr
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,hi,ivr
+urgent payment request otp verify,scam,ta,whatsapp
+normal support acknowledgement,benign,gu,mobile_app
+urgent payment request otp verify,scam,bn,mobile_app
+normal support acknowledgement,benign,ta,ivr
+urgent payment request otp verify,scam,hi,ivr
+normal support acknowledgement,benign,ta,ivr
+urgent payment request otp verify,scam,en,mobile_app
+normal support acknowledgement,benign,as,ivr
+urgent payment request otp verify,scam,gu,whatsapp
+normal support acknowledgement,benign,or,whatsapp
+urgent payment request otp verify,scam,kn,whatsapp
+normal support acknowledgement,benign,hi,whatsapp
+urgent payment request otp verify,scam,ml,mobile_app
+normal support acknowledgement,benign,bn,ivr
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,pa,ivr
+urgent payment request otp verify,scam,or,whatsapp
+normal support acknowledgement,benign,ml,ivr
+urgent payment request otp verify,scam,bn,whatsapp
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,mr,mobile_app
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,ml,mobile_app
+normal support acknowledgement,benign,bn,ivr
+urgent payment request otp verify,scam,hi,mobile_app
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,te,ivr
+normal support acknowledgement,benign,or,ivr
+urgent payment request otp verify,scam,hi,whatsapp
+normal support acknowledgement,benign,gu,whatsapp
+urgent payment request otp verify,scam,or,mobile_app
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,en,mobile_app
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,ml,mobile_app
+urgent payment request otp verify,scam,gu,whatsapp
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,or,whatsapp
+normal support acknowledgement,benign,kn,mobile_app
+urgent payment request otp verify,scam,or,mobile_app
+normal support acknowledgement,benign,ta,ivr
+urgent payment request otp verify,scam,te,whatsapp
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,mr,mobile_app
+normal support acknowledgement,benign,pa,ivr
+urgent payment request otp verify,scam,hi,whatsapp
+normal support acknowledgement,benign,as,whatsapp
+urgent payment request otp verify,scam,hi,mobile_app
+normal support acknowledgement,benign,en,ivr
+urgent payment request otp verify,scam,hi,whatsapp
+normal support acknowledgement,benign,bn,ivr
+urgent payment request otp verify,scam,en,whatsapp
+normal support acknowledgement,benign,hi,mobile_app
+urgent payment request otp verify,scam,ml,mobile_app
+normal support acknowledgement,benign,mr,whatsapp
+urgent payment request otp verify,scam,te,ivr
+normal support acknowledgement,benign,gu,whatsapp
+urgent payment request otp verify,scam,kn,mobile_app
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,ml,mobile_app
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,mr,whatsapp
+normal support acknowledgement,benign,ta,ivr
+urgent payment request otp verify,scam,pa,ivr
+normal support acknowledgement,benign,as,whatsapp
+urgent payment request otp verify,scam,ta,mobile_app
+normal support acknowledgement,benign,as,whatsapp
+urgent payment request otp verify,scam,te,whatsapp
+normal support acknowledgement,benign,or,ivr
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,ml,whatsapp
+normal support acknowledgement,benign,kn,mobile_app
+urgent payment request otp verify,scam,bn,mobile_app
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,or,ivr
+normal support acknowledgement,benign,hi,ivr
+urgent payment request otp verify,scam,bn,ivr
+normal support acknowledgement,benign,pa,ivr
+urgent payment request otp verify,scam,bn,whatsapp
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,gu,mobile_app
+urgent payment request otp verify,scam,en,whatsapp
+normal support acknowledgement,benign,gu,whatsapp
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,as,whatsapp
+normal support acknowledgement,benign,mr,mobile_app
+urgent payment request otp verify,scam,as,ivr
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,hi,ivr
+normal support acknowledgement,benign,pa,mobile_app
+urgent payment request otp verify,scam,kn,whatsapp
+normal support acknowledgement,benign,ml,ivr
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,bn,ivr
+urgent payment request otp verify,scam,kn,ivr
+normal support acknowledgement,benign,en,mobile_app
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,pa,mobile_app
+urgent payment request otp verify,scam,ml,whatsapp
+normal support acknowledgement,benign,ta,mobile_app
+urgent payment request otp verify,scam,mr,whatsapp
+normal support acknowledgement,benign,en,whatsapp
+urgent payment request otp verify,scam,mr,mobile_app
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,gu,mobile_app
+normal support acknowledgement,benign,kn,mobile_app
+urgent payment request otp verify,scam,pa,whatsapp
+normal support acknowledgement,benign,ml,ivr
+urgent payment request otp verify,scam,bn,ivr
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,gu,mobile_app
+urgent payment request otp verify,scam,hi,ivr
+normal support acknowledgement,benign,ml,ivr
+urgent payment request otp verify,scam,gu,ivr
+normal support acknowledgement,benign,pa,mobile_app
+urgent payment request otp verify,scam,as,whatsapp
+normal support acknowledgement,benign,ml,mobile_app
+urgent payment request otp verify,scam,bn,mobile_app
+normal support acknowledgement,benign,ta,mobile_app
+urgent payment request otp verify,scam,or,mobile_app
+normal support acknowledgement,benign,ta,ivr
+urgent payment request otp verify,scam,en,ivr
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,ta,whatsapp
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,hi,ivr
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,te,ivr
+urgent payment request otp verify,scam,hi,whatsapp
+normal support acknowledgement,benign,bn,mobile_app
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,mr,whatsapp
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,pa,whatsapp
+normal support acknowledgement,benign,kn,mobile_app
+urgent payment request otp verify,scam,mr,whatsapp
+normal support acknowledgement,benign,ta,whatsapp
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,hi,mobile_app
+urgent payment request otp verify,scam,te,whatsapp
+normal support acknowledgement,benign,ml,mobile_app
+urgent payment request otp verify,scam,hi,whatsapp
+normal support acknowledgement,benign,as,whatsapp
+urgent payment request otp verify,scam,hi,ivr
+normal support acknowledgement,benign,ta,mobile_app
+urgent payment request otp verify,scam,bn,ivr
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,te,whatsapp
+normal support acknowledgement,benign,as,mobile_app
+urgent payment request otp verify,scam,as,ivr
+normal support acknowledgement,benign,en,ivr
+urgent payment request otp verify,scam,ml,mobile_app
+normal support acknowledgement,benign,ml,ivr
+urgent payment request otp verify,scam,hi,mobile_app
+normal support acknowledgement,benign,ta,mobile_app
+urgent payment request otp verify,scam,pa,whatsapp
+normal support acknowledgement,benign,kn,mobile_app
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,as,ivr
+normal support acknowledgement,benign,kn,mobile_app
+urgent payment request otp verify,scam,gu,ivr
+normal support acknowledgement,benign,pa,mobile_app
+urgent payment request otp verify,scam,pa,whatsapp
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,te,ivr
+normal support acknowledgement,benign,ml,ivr
+urgent payment request otp verify,scam,hi,ivr
+normal support acknowledgement,benign,as,whatsapp
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,as,whatsapp
+normal support acknowledgement,benign,en,mobile_app
+urgent payment request otp verify,scam,te,ivr
+normal support acknowledgement,benign,en,whatsapp
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,pa,whatsapp
+urgent payment request otp verify,scam,en,mobile_app
+normal support acknowledgement,benign,as,ivr
+urgent payment request otp verify,scam,ta,whatsapp
+normal support acknowledgement,benign,hi,ivr
+urgent payment request otp verify,scam,as,ivr
+normal support acknowledgement,benign,ml,mobile_app
+urgent payment request otp verify,scam,ta,mobile_app
+normal support acknowledgement,benign,as,whatsapp
+urgent payment request otp verify,scam,ta,whatsapp
+normal support acknowledgement,benign,bn,whatsapp
+urgent payment request otp verify,scam,gu,ivr
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,ml,ivr
+normal support acknowledgement,benign,ta,mobile_app
+urgent payment request otp verify,scam,pa,whatsapp
+normal support acknowledgement,benign,as,ivr
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,en,whatsapp
+urgent payment request otp verify,scam,kn,whatsapp
+normal support acknowledgement,benign,hi,mobile_app
+urgent payment request otp verify,scam,te,ivr
+normal support acknowledgement,benign,en,mobile_app
+urgent payment request otp verify,scam,te,whatsapp
+normal support acknowledgement,benign,mr,mobile_app
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,pa,mobile_app
+urgent payment request otp verify,scam,hi,ivr
+normal support acknowledgement,benign,as,ivr
+urgent payment request otp verify,scam,te,whatsapp
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,hi,mobile_app
+normal support acknowledgement,benign,or,whatsapp
+urgent payment request otp verify,scam,as,whatsapp
+normal support acknowledgement,benign,te,whatsapp
+urgent payment request otp verify,scam,or,ivr
+normal support acknowledgement,benign,ml,ivr
+urgent payment request otp verify,scam,kn,ivr
+normal support acknowledgement,benign,bn,ivr
+urgent payment request otp verify,scam,hi,mobile_app
+normal support acknowledgement,benign,ta,whatsapp
+urgent payment request otp verify,scam,pa,whatsapp
+normal support acknowledgement,benign,te,mobile_app
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,mr,whatsapp
+normal support acknowledgement,benign,bn,whatsapp
+urgent payment request otp verify,scam,as,whatsapp
+normal support acknowledgement,benign,pa,mobile_app
+urgent payment request otp verify,scam,as,mobile_app
+normal support acknowledgement,benign,en,whatsapp
+urgent payment request otp verify,scam,ta,mobile_app
+normal support acknowledgement,benign,bn,ivr
+urgent payment request otp verify,scam,ml,whatsapp
+normal support acknowledgement,benign,ta,whatsapp
+urgent payment request otp verify,scam,gu,whatsapp
+normal support acknowledgement,benign,as,mobile_app
+urgent payment request otp verify,scam,bn,whatsapp
+normal support acknowledgement,benign,pa,ivr
+urgent payment request otp verify,scam,ml,ivr
+normal support acknowledgement,benign,gu,whatsapp
+urgent payment request otp verify,scam,kn,whatsapp
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,gu,whatsapp
+normal support acknowledgement,benign,as,mobile_app
+urgent payment request otp verify,scam,bn,mobile_app
+normal support acknowledgement,benign,mr,ivr
+urgent payment request otp verify,scam,or,mobile_app
+normal support acknowledgement,benign,or,whatsapp
+urgent payment request otp verify,scam,gu,mobile_app
+normal support acknowledgement,benign,gu,ivr
+urgent payment request otp verify,scam,ml,whatsapp
+normal support acknowledgement,benign,ml,whatsapp
+urgent payment request otp verify,scam,ta,whatsapp
+normal support acknowledgement,benign,te,mobile_app
+urgent payment request otp verify,scam,pa,mobile_app
+normal support acknowledgement,benign,or,ivr
+urgent payment request otp verify,scam,te,mobile_app
+normal support acknowledgement,benign,gu,mobile_app
+urgent payment request otp verify,scam,pa,ivr
+normal support acknowledgement,benign,ta,ivr
+urgent payment request otp verify,scam,kn,ivr
+normal support acknowledgement,benign,bn,mobile_app
+urgent payment request otp verify,scam,ta,ivr
+normal support acknowledgement,benign,te,ivr
+urgent payment request otp verify,scam,ta,ivr
+normal support acknowledgement,benign,kn,whatsapp
+urgent payment request otp verify,scam,as,ivr
+normal support acknowledgement,benign,ta,whatsapp
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,pa,ivr
+urgent payment request otp verify,scam,bn,ivr
+normal support acknowledgement,benign,ml,whatsapp
+urgent payment request otp verify,scam,pa,whatsapp
+normal support acknowledgement,benign,gu,whatsapp
+urgent payment request otp verify,scam,kn,ivr
+normal support acknowledgement,benign,or,whatsapp
+urgent payment request otp verify,scam,en,whatsapp
+normal support acknowledgement,benign,ml,whatsapp
+urgent payment request otp verify,scam,pa,whatsapp
+normal support acknowledgement,benign,or,mobile_app
+urgent payment request otp verify,scam,mr,ivr
+normal support acknowledgement,benign,kn,ivr
+urgent payment request otp verify,scam,mr,whatsapp
+normal support acknowledgement,benign,ta,whatsapp
+urgent payment request otp verify,scam,en,ivr
+normal support acknowledgement,benign,ml,whatsapp
+urgent payment request otp verify,scam,bn,ivr
+normal support acknowledgement,benign,mr,ivr

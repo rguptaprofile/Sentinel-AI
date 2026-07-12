@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from 'react-leaflet'
-import fallbackHeatmapData from '@/services/data/heatmapData.json'
 import api from '@/services/api'
 import LoadingSpinner from '@/components/common/LoadingSpinner'
 
@@ -21,11 +20,11 @@ function getIntensityColor(intensity) {
 
 export default function IndiaHeatMap({ height = '100%' }) {
   const [ready, setReady] = useState(false)
-  const [points, setPoints] = useState(fallbackHeatmapData)
+  const [points, setPoints] = useState([])
 
   useEffect(() => {
     setReady(true)
-    api.getHeatmapData().then((data) => setPoints(data?.length ? data : fallbackHeatmapData))
+    api.getHeatmapData().then((data) => setPoints(data?.length ? data : []))
   }, [])
 
   if (!ready) {

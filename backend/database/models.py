@@ -171,6 +171,7 @@ class ModelRunRecord(MongoDocument):
 class UserRecord(MongoDocument):
     name: str = ""
     email: str = ""
+    password_hash: str = ""
     role: str = "citizen"
     status: str = "active"
     avatar: str | None = None

@@ -12,6 +12,7 @@ from backend.database.models import (
     GeoIncidentRecord,
     ModelRunRecord,
     TransactionEventRecord,
+    UserRecord,
 )
 
 
@@ -50,7 +51,7 @@ def get_dashboard_stats(role: str, db: Database = Depends(get_db)) -> dict:
             "highRiskAccounts": high_risk,
         },
         "admin": {
-            "totalUsers": 12847,
+            "totalUsers": count_documents(db, UserRecord),
             "totalReports": reports,
             "aiModels": 5,
             "systemHealth": 98.7,
@@ -155,11 +156,7 @@ def get_chart_data(db: Database = Depends(get_db)) -> dict:
     state_counts = Counter((report.location or "Unknown").split(",")[-1].strip() for report in reports)
     type_counts = Counter(report.incident_type or "Other" for report in reports)
     return {
-        "fraudTrend": [
-            {"month": "Jan", "reports": 8200, "losses": 45},
-            {"month": "Feb", "reports": 9800, "losses": 57},
-            {"month": "Mar", "reports": len(reports) * 1750, "losses": round(sum((r.amount or 0) for r in reports) / 100000, 1)},
-        ],
+        "fraudTrend": [{"month": "Live", "reports": len(reports), "losses": round(sum((r.amount or 0) for r in reports) / 100000, 1)}],
         "reportsByState": [{"state": key, "reports": value, "fill": "#2563EB"} for key, value in state_counts.items()],
         "scamCategories": [{"name": key, "value": value, "fill": "#38BDF8"} for key, value in type_counts.items()],
         "transactionVolume": [{"day": "Live", "volume": len(txns) * 900, "flagged": sum(1 for txn in txns if txn.risk_score >= 60)}],

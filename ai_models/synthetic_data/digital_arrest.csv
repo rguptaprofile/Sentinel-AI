@@ -1,0 +1,501 @@
+text,label
+kyc suspension message with otp verification reference #0,scam
+delivery update message with service ticket reference #1,benign
+otp verification message with video call inspection reference #2,scam
+delivery update message with bank statement reference #3,benign
+digital arrest message with otp verification reference #4,scam
+bill receipt message with delivery update reference #5,benign
+account freeze message with police case reference #6,scam
+bank statement message with bill receipt reference #7,benign
+account freeze message with kyc suspension reference #8,scam
+delivery update message with appointment reminder reference #9,benign
+digital arrest message with police case reference #10,scam
+service ticket message with bill receipt reference #11,benign
+kyc suspension message with digital arrest reference #12,scam
+bill receipt message with bank statement reference #13,benign
+account freeze message with digital arrest reference #14,scam
+appointment reminder message with delivery update reference #15,benign
+otp verification message with account freeze reference #16,scam
+service ticket message with delivery update reference #17,benign
+account freeze message with police case reference #18,scam
+service ticket message with bank statement reference #19,benign
+digital arrest message with otp verification reference #20,scam
+appointment reminder message with bill receipt reference #21,benign
+video call inspection message with police case reference #22,scam
+service ticket message with appointment reminder reference #23,benign
+digital arrest message with account freeze reference #24,scam
+bill receipt message with appointment reminder reference #25,benign
+video call inspection message with police case reference #26,scam
+appointment reminder message with bank statement reference #27,benign
+otp verification message with police case reference #28,scam
+service ticket message with bank statement reference #29,benign
+otp verification message with kyc suspension reference #30,scam
+bill receipt message with service ticket reference #31,benign
+digital arrest message with video call inspection reference #32,scam
+service ticket message with bill receipt reference #33,benign
+police case message with digital arrest reference #34,scam
+delivery update message with service ticket reference #35,benign
+kyc suspension message with video call inspection reference #36,scam
+bank statement message with appointment reminder reference #37,benign
+account freeze message with police case reference #38,scam
+service ticket message with appointment reminder reference #39,benign
+digital arrest message with account freeze reference #40,scam
+service ticket message with bill receipt reference #41,benign
+digital arrest message with police case reference #42,scam
+delivery update message with service ticket reference #43,benign
+otp verification message with video call inspection reference #44,scam
+delivery update message with bank statement reference #45,benign
+account freeze message with kyc suspension reference #46,scam
+delivery update message with service ticket reference #47,benign
+digital arrest message with account freeze reference #48,scam
+appointment reminder message with bill receipt reference #49,benign
+otp verification message with police case reference #50,scam
+bill receipt message with appointment reminder reference #51,benign
+video call inspection message with kyc suspension reference #52,scam
+bank statement message with appointment reminder reference #53,benign
+account freeze message with kyc suspension reference #54,scam
+delivery update message with bill receipt reference #55,benign
+otp verification message with kyc suspension reference #56,scam
+delivery update message with bill receipt reference #57,benign
+kyc suspension message with police case reference #58,scam
+service ticket message with bank statement reference #59,benign
+digital arrest message with account freeze reference #60,scam
+bank statement message with bill receipt reference #61,benign
+account freeze message with video call inspection reference #62,scam
+appointment reminder message with bank statement reference #63,benign
+video call inspection message with police case reference #64,scam
+service ticket message with appointment reminder reference #65,benign
+otp verification message with video call inspection reference #66,scam
+service ticket message with bill receipt reference #67,benign
+account freeze message with police case reference #68,scam
+service ticket message with delivery update reference #69,benign
+otp verification message with video call inspection reference #70,scam
+appointment reminder message with bank statement reference #71,benign
+account freeze message with kyc suspension reference #72,scam
+bank statement message with appointment reminder reference #73,benign
+otp verification message with police case reference #74,scam
+bill receipt message with delivery update reference #75,benign
+video call inspection message with police case reference #76,scam
+service ticket message with appointment reminder reference #77,benign
+account freeze message with kyc suspension reference #78,scam
+bank statement message with bill receipt reference #79,benign
+police case message with video call inspection reference #80,scam
+delivery update message with bill receipt reference #81,benign
+kyc suspension message with otp verification reference #82,scam
+service ticket message with bill receipt reference #83,benign
+digital arrest message with account freeze reference #84,scam
+bank statement message with appointment reminder reference #85,benign
+account freeze message with video call inspection reference #86,scam
+service ticket message with delivery update reference #87,benign
+account freeze message with video call inspection reference #88,scam
+delivery update message with appointment reminder reference #89,benign
+video call inspection message with otp verification reference #90,scam
+appointment reminder message with bill receipt reference #91,benign
+otp verification message with digital arrest reference #92,scam
+service ticket message with delivery update reference #93,benign
+otp verification message with account freeze reference #94,scam
+bill receipt message with service ticket reference #95,benign
+digital arrest message with police case reference #96,scam
+bill receipt message with delivery update reference #97,benign
+video call inspection message with digital arrest reference #98,scam
+bank statement message with service ticket reference #99,benign
+kyc suspension message with account freeze reference #100,scam
+bank statement message with delivery update reference #101,benign
+video call inspection message with otp verification reference #102,scam
+appointment reminder message with delivery update reference #103,benign
+account freeze message with video call inspection reference #104,scam
+service ticket message with bill receipt reference #105,benign
+digital arrest message with kyc suspension reference #106,scam
+appointment reminder message with delivery update reference #107,benign
+video call inspection message with digital arrest reference #108,scam
+bank statement message with bill receipt reference #109,benign
+account freeze message with digital arrest reference #110,scam
+bill receipt message with delivery update reference #111,benign
+video call inspection message with police case reference #112,scam
+service ticket message with bill receipt reference #113,benign
+digital arrest message with otp verification reference #114,scam
+bank statement message with delivery update reference #115,benign
+digital arrest message with account freeze reference #116,scam
+appointment reminder message with delivery update reference #117,benign
+otp verification message with police case reference #118,scam
+service ticket message with delivery update reference #119,benign
+police case message with otp verification reference #120,scam
+delivery update message with bank statement reference #121,benign
+video call inspection message with otp verification reference #122,scam
+delivery update message with service ticket reference #123,benign
+account freeze message with digital arrest reference #124,scam
+bill receipt message with service ticket reference #125,benign
+police case message with video call inspection reference #126,scam
+bill receipt message with delivery update reference #127,benign
+account freeze message with digital arrest reference #128,scam
+delivery update message with appointment reminder reference #129,benign
+kyc suspension message with digital arrest reference #130,scam
+service ticket message with delivery update reference #131,benign
+video call inspection message with kyc suspension reference #132,scam
+delivery update message with appointment reminder reference #133,benign
+otp verification message with kyc suspension reference #134,scam
+delivery update message with bill receipt reference #135,benign
+otp verification message with police case reference #136,scam
+bank statement message with delivery update reference #137,benign
+otp verification message with video call inspection reference #138,scam
+appointment reminder message with bank statement reference #139,benign
+otp verification message with kyc suspension reference #140,scam
+service ticket message with delivery update reference #141,benign
+video call inspection message with otp verification reference #142,scam
+appointment reminder message with service ticket reference #143,benign
+digital arrest message with account freeze reference #144,scam
+appointment reminder message with bank statement reference #145,benign
+police case message with video call inspection reference #146,scam
+bill receipt message with bank statement reference #147,benign
+account freeze message with police case reference #148,scam
+bank statement message with delivery update reference #149,benign
+video call inspection message with kyc suspension reference #150,scam
+bank statement message with bill receipt reference #151,benign
+digital arrest message with police case reference #152,scam
+service ticket message with delivery update reference #153,benign
+video call inspection message with otp verification reference #154,scam
+bill receipt message with service ticket reference #155,benign
+otp verification message with account freeze reference #156,scam
+appointment reminder message with bank statement reference #157,benign
+account freeze message with police case reference #158,scam
+bank statement message with delivery update reference #159,benign
+video call inspection message with kyc suspension reference #160,scam
+delivery update message with bill receipt reference #161,benign
+otp verification message with video call inspection reference #162,scam
+delivery update message with bill receipt reference #163,benign
+kyc suspension message with police case reference #164,scam
+bank statement message with delivery update reference #165,benign
+kyc suspension message with digital arrest reference #166,scam
+service ticket message with appointment reminder reference #167,benign
+digital arrest message with kyc suspension reference #168,scam
+service ticket message with appointment reminder reference #169,benign
+video call inspection message with digital arrest reference #170,scam
+service ticket message with bill receipt reference #171,benign
+police case message with otp verification reference #172,scam
+appointment reminder message with delivery update reference #173,benign
+otp verification message with police case reference #174,scam
+service ticket message with delivery update reference #175,benign
+digital arrest message with otp verification reference #176,scam
+bank statement message with delivery update reference #177,benign
+video call inspection message with digital arrest reference #178,scam
+bank statement message with service ticket reference #179,benign
+account freeze message with otp verification reference #180,scam
+delivery update message with appointment reminder reference #181,benign
+digital arrest message with kyc suspension reference #182,scam
+bill receipt message with delivery update reference #183,benign
+digital arrest message with account freeze reference #184,scam
+appointment reminder message with service ticket reference #185,benign
+video call inspection message with digital arrest reference #186,scam
+delivery update message with service ticket reference #187,benign
+kyc suspension message with digital arrest reference #188,scam
+bill receipt message with service ticket reference #189,benign
+otp verification message with video call inspection reference #190,scam
+delivery update message with bill receipt reference #191,benign
+digital arrest message with video call inspection reference #192,scam
+bill receipt message with bank statement reference #193,benign
+kyc suspension message with account freeze reference #194,scam
+delivery update message with bank statement reference #195,benign
+kyc suspension message with police case reference #196,scam
+bank statement message with appointment reminder reference #197,benign
+otp verification message with digital arrest reference #198,scam
+delivery update message with service ticket reference #199,benign
+account freeze message with video call inspection reference #200,scam
+appointment reminder message with bank statement reference #201,benign
+police case message with video call inspection reference #202,scam
+appointment reminder message with bank statement reference #203,benign
+digital arrest message with otp verification reference #204,scam
+appointment reminder message with service ticket reference #205,benign
+kyc suspension message with digital arrest reference #206,scam
+delivery update message with bank statement reference #207,benign
+kyc suspension message with police case reference #208,scam
+bank statement message with service ticket reference #209,benign
+police case message with digital arrest reference #210,scam
+bill receipt message with delivery update reference #211,benign
+police case message with account freeze reference #212,scam
+bank statement message with delivery update reference #213,benign
+kyc suspension message with otp verification reference #214,scam
+bill receipt message with service ticket reference #215,benign
+account freeze message with digital arrest reference #216,scam
+bill receipt message with bank statement reference #217,benign
+kyc suspension message with account freeze reference #218,scam
+service ticket message with bank statement reference #219,benign
+otp verification message with police case reference #220,scam
+delivery update message with bank statement reference #221,benign
+digital arrest message with kyc suspension reference #222,scam
+delivery update message with bank statement reference #223,benign
+police case message with digital arrest reference #224,scam
+bank statement message with bill receipt reference #225,benign
+digital arrest message with video call inspection reference #226,scam
+service ticket message with bill receipt reference #227,benign
+kyc suspension message with police case reference #228,scam
+bill receipt message with delivery update reference #229,benign
+digital arrest message with police case reference #230,scam
+bank statement message with delivery update reference #231,benign
+otp verification message with digital arrest reference #232,scam
+appointment reminder message with bill receipt reference #233,benign
+otp verification message with account freeze reference #234,scam
+service ticket message with appointment reminder reference #235,benign
+otp verification message with kyc suspension reference #236,scam
+delivery update message with appointment reminder reference #237,benign
+kyc suspension message with digital arrest reference #238,scam
+bill receipt message with appointment reminder reference #239,benign
+police case message with otp verification reference #240,scam
+service ticket message with delivery update reference #241,benign
+police case message with video call inspection reference #242,scam
+service ticket message with bank statement reference #243,benign
+account freeze message with kyc suspension reference #244,scam
+service ticket message with appointment reminder reference #245,benign
+video call inspection message with digital arrest reference #246,scam
+bank statement message with bill receipt reference #247,benign
+police case message with otp verification reference #248,scam
+service ticket message with appointment reminder reference #249,benign
+otp verification message with video call inspection reference #250,scam
+appointment reminder message with bank statement reference #251,benign
+video call inspection message with otp verification reference #252,scam
+service ticket message with appointment reminder reference #253,benign
+digital arrest message with police case reference #254,scam
+delivery update message with service ticket reference #255,benign
+kyc suspension message with account freeze reference #256,scam
+delivery update message with bill receipt reference #257,benign
+digital arrest message with kyc suspension reference #258,scam
+bill receipt message with bank statement reference #259,benign
+digital arrest message with video call inspection reference #260,scam
+delivery update message with service ticket reference #261,benign
+account freeze message with otp verification reference #262,scam
+delivery update message with appointment reminder reference #263,benign
+kyc suspension message with digital arrest reference #264,scam
+delivery update message with bank statement reference #265,benign
+police case message with account freeze reference #266,scam
+service ticket message with appointment reminder reference #267,benign
+kyc suspension message with account freeze reference #268,scam
+delivery update message with appointment reminder reference #269,benign
+police case message with digital arrest reference #270,scam
+delivery update message with appointment reminder reference #271,benign
+digital arrest message with video call inspection reference #272,scam
+bill receipt message with service ticket reference #273,benign
+video call inspection message with police case reference #274,scam
+bank statement message with bill receipt reference #275,benign
+kyc suspension message with account freeze reference #276,scam
+delivery update message with bill receipt reference #277,benign
+kyc suspension message with video call inspection reference #278,scam
+bill receipt message with bank statement reference #279,benign
+kyc suspension message with video call inspection reference #280,scam
+bank statement message with bill receipt reference #281,benign
+account freeze message with digital arrest reference #282,scam
+appointment reminder message with bank statement reference #283,benign
+kyc suspension message with otp verification reference #284,scam
+bank statement message with appointment reminder reference #285,benign
+account freeze message with digital arrest reference #286,scam
+delivery update message with bank statement reference #287,benign
+digital arrest message with video call inspection reference #288,scam
+service ticket message with appointment reminder reference #289,benign
+kyc suspension message with video call inspection reference #290,scam
+delivery update message with service ticket reference #291,benign
+police case message with account freeze reference #292,scam
+appointment reminder message with bill receipt reference #293,benign
+police case message with kyc suspension reference #294,scam
+service ticket message with bill receipt reference #295,benign
+police case message with video call inspection reference #296,scam
+delivery update message with bank statement reference #297,benign
+police case message with digital arrest reference #298,scam
+bank statement message with bill receipt reference #299,benign
+police case message with video call inspection reference #300,scam
+appointment reminder message with bank statement reference #301,benign
+digital arrest message with video call inspection reference #302,scam
+appointment reminder message with bill receipt reference #303,benign
+police case message with digital arrest reference #304,scam
+bank statement message with service ticket reference #305,benign
+account freeze message with kyc suspension reference #306,scam
+bill receipt message with appointment reminder reference #307,benign
+digital arrest message with account freeze reference #308,scam
+service ticket message with bill receipt reference #309,benign
+video call inspection message with kyc suspension reference #310,scam
+bill receipt message with service ticket reference #311,benign
+kyc suspension message with digital arrest reference #312,scam
+appointment reminder message with delivery update reference #313,benign
+kyc suspension message with otp verification reference #314,scam
+bill receipt message with delivery update reference #315,benign
+otp verification message with account freeze reference #316,scam
+service ticket message with delivery update reference #317,benign
+otp verification message with digital arrest reference #318,scam
+delivery update message with service ticket reference #319,benign
+video call inspection message with account freeze reference #320,scam
+service ticket message with appointment reminder reference #321,benign
+police case message with video call inspection reference #322,scam
+delivery update message with bill receipt reference #323,benign
+kyc suspension message with account freeze reference #324,scam
+appointment reminder message with bank statement reference #325,benign
+digital arrest message with police case reference #326,scam
+bill receipt message with appointment reminder reference #327,benign
+digital arrest message with otp verification reference #328,scam
+delivery update message with bill receipt reference #329,benign
+police case message with video call inspection reference #330,scam
+appointment reminder message with delivery update reference #331,benign
+video call inspection message with police case reference #332,scam
+bank statement message with bill receipt reference #333,benign
+video call inspection message with kyc suspension reference #334,scam
+delivery update message with bank statement reference #335,benign
+kyc suspension message with account freeze reference #336,scam
+bill receipt message with service ticket reference #337,benign
+otp verification message with video call inspection reference #338,scam
+bill receipt message with bank statement reference #339,benign
+kyc suspension message with video call inspection reference #340,scam
+delivery update message with bill receipt reference #341,benign
+kyc suspension message with police case reference #342,scam
+service ticket message with bank statement reference #343,benign
+otp verification message with video call inspection reference #344,scam
+service ticket message with delivery update reference #345,benign
+police case message with kyc suspension reference #346,scam
+delivery update message with bill receipt reference #347,benign
+otp verification message with digital arrest reference #348,scam
+bank statement message with service ticket reference #349,benign
+account freeze message with video call inspection reference #350,scam
+delivery update message with appointment reminder reference #351,benign
+digital arrest message with police case reference #352,scam
+appointment reminder message with bank statement reference #353,benign
+otp verification message with video call inspection reference #354,scam
+bank statement message with delivery update reference #355,benign
+otp verification message with digital arrest reference #356,scam
+bank statement message with delivery update reference #357,benign
+video call inspection message with account freeze reference #358,scam
+delivery update message with bank statement reference #359,benign
+kyc suspension message with video call inspection reference #360,scam
+service ticket message with delivery update reference #361,benign
+otp verification message with digital arrest reference #362,scam
+service ticket message with bill receipt reference #363,benign
+account freeze message with digital arrest reference #364,scam
+service ticket message with appointment reminder reference #365,benign
+otp verification message with digital arrest reference #366,scam
+bill receipt message with service ticket reference #367,benign
+kyc suspension message with digital arrest reference #368,scam
+service ticket message with appointment reminder reference #369,benign
+account freeze message with digital arrest reference #370,scam
+service ticket message with delivery update reference #371,benign
+kyc suspension message with video call inspection reference #372,scam
+appointment reminder message with delivery update reference #373,benign
+otp verification message with kyc suspension reference #374,scam
+delivery update message with bank statement reference #375,benign
+kyc suspension message with police case reference #376,scam
+appointment reminder message with bank statement reference #377,benign
+police case message with digital arrest reference #378,scam
+appointment reminder message with bill receipt reference #379,benign
+video call inspection message with digital arrest reference #380,scam
+delivery update message with appointment reminder reference #381,benign
+kyc suspension message with digital arrest reference #382,scam
+appointment reminder message with service ticket reference #383,benign
+police case message with account freeze reference #384,scam
+delivery update message with appointment reminder reference #385,benign
+account freeze message with police case reference #386,scam
+bill receipt message with service ticket reference #387,benign
+account freeze message with police case reference #388,scam
+appointment reminder message with bank statement reference #389,benign
+police case message with video call inspection reference #390,scam
+service ticket message with delivery update reference #391,benign
+video call inspection message with kyc suspension reference #392,scam
+service ticket message with bill receipt reference #393,benign
+video call inspection message with otp verification reference #394,scam
+bank statement message with bill receipt reference #395,benign
+account freeze message with police case reference #396,scam
+bill receipt message with appointment reminder reference #397,benign
+otp verification message with video call inspection reference #398,scam
+appointment reminder message with delivery update reference #399,benign
+account freeze message with video call inspection reference #400,scam
+appointment reminder message with bill receipt reference #401,benign
+kyc suspension message with video call inspection reference #402,scam
+appointment reminder message with bill receipt reference #403,benign
+police case message with digital arrest reference #404,scam
+bill receipt message with appointment reminder reference #405,benign
+video call inspection message with otp verification reference #406,scam
+appointment reminder message with bill receipt reference #407,benign
+kyc suspension message with otp verification reference #408,scam
+delivery update message with service ticket reference #409,benign
+account freeze message with video call inspection reference #410,scam
+service ticket message with appointment reminder reference #411,benign
+account freeze message with kyc suspension reference #412,scam
+delivery update message with appointment reminder reference #413,benign
+video call inspection message with otp verification reference #414,scam
+delivery update message with bank statement reference #415,benign
+video call inspection message with account freeze reference #416,scam
+appointment reminder message with bank statement reference #417,benign
+kyc suspension message with otp verification reference #418,scam
+bill receipt message with appointment reminder reference #419,benign
+account freeze message with otp verification reference #420,scam
+service ticket message with bill receipt reference #421,benign
+video call inspection message with digital arrest reference #422,scam
+bill receipt message with service ticket reference #423,benign
+digital arrest message with video call inspection reference #424,scam
+bank statement message with service ticket reference #425,benign
+digital arrest message with kyc suspension reference #426,scam
+appointment reminder message with bank statement reference #427,benign
+account freeze message with otp verification reference #428,scam
+bank statement message with delivery update reference #429,benign
+account freeze message with kyc suspension reference #430,scam
+bank statement message with appointment reminder reference #431,benign
+kyc suspension message with video call inspection reference #432,scam
+bank statement message with delivery update reference #433,benign
+police case message with otp verification reference #434,scam
+delivery update message with bank statement reference #435,benign
+digital arrest message with otp verification reference #436,scam
+bank statement message with bill receipt reference #437,benign
+otp verification message with kyc suspension reference #438,scam
+service ticket message with appointment reminder reference #439,benign
+digital arrest message with video call inspection reference #440,scam
+service ticket message with appointment reminder reference #441,benign
+otp verification message with police case reference #442,scam
+bank statement message with delivery update reference #443,benign
+kyc suspension message with police case reference #444,scam
+bill receipt message with service ticket reference #445,benign
+digital arrest message with police case reference #446,scam
+delivery update message with appointment reminder reference #447,benign
+account freeze message with digital arrest reference #448,scam
+delivery update message with service ticket reference #449,benign
+video call inspection message with kyc suspension reference #450,scam
+bill receipt message with bank statement reference #451,benign
+video call inspection message with kyc suspension reference #452,scam
+bank statement message with appointment reminder reference #453,benign
+police case message with otp verification reference #454,scam
+bank statement message with bill receipt reference #455,benign
+digital arrest message with otp verification reference #456,scam
+appointment reminder message with bank statement reference #457,benign
+kyc suspension message with otp verification reference #458,scam
+service ticket message with bill receipt reference #459,benign
+kyc suspension message with otp verification reference #460,scam
+delivery update message with service ticket reference #461,benign
+otp verification message with video call inspection reference #462,scam
+bank statement message with delivery update reference #463,benign
+digital arrest message with account freeze reference #464,scam
+appointment reminder message with service ticket reference #465,benign
+otp verification message with digital arrest reference #466,scam
+delivery update message with appointment reminder reference #467,benign
+account freeze message with digital arrest reference #468,scam
+bill receipt message with bank statement reference #469,benign
+kyc suspension message with account freeze reference #470,scam
+service ticket message with bill receipt reference #471,benign
+digital arrest message with otp verification reference #472,scam
+bill receipt message with service ticket reference #473,benign
+police case message with kyc suspension reference #474,scam
+bank statement message with appointment reminder reference #475,benign
+digital arrest message with video call inspection reference #476,scam
+bank statement message with appointment reminder reference #477,benign
+kyc suspension message with video call inspection reference #478,scam
+appointment reminder message with delivery update reference #479,benign
+police case message with kyc suspension reference #480,scam
+delivery update message with service ticket reference #481,benign
+police case message with digital arrest reference #482,scam
+service ticket message with bill receipt reference #483,benign
+otp verification message with digital arrest reference #484,scam
+bill receipt message with appointment reminder reference #485,benign
+account freeze message with digital arrest reference #486,scam
+bill receipt message with bank statement reference #487,benign
+account freeze message with digital arrest reference #488,scam
+service ticket message with appointment reminder reference #489,benign
+otp verification message with police case reference #490,scam
+delivery update message with bank statement reference #491,benign
+otp verification message with digital arrest reference #492,scam
+appointment reminder message with delivery update reference #493,benign
+police case message with otp verification reference #494,scam
+bill receipt message with service ticket reference #495,benign
+police case message with kyc suspension reference #496,scam
+bank statement message with bill receipt reference #497,benign
+otp verification message with police case reference #498,scam
+appointment reminder message with delivery update reference #499,benign

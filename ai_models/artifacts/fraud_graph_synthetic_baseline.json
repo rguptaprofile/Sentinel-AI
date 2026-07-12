@@ -1,0 +1,11 @@
+{
+  "model_key": "fraud_graph",
+  "trained_at": "2026-07-12T15:33:13.883190Z",
+  "artifact_type": "synthetic_baseline",
+  "source_dataset": "E:\\Sentinel-AI\\ai_models\\synthetic_data\\fraud_graph_edges.csv",
+  "record_count": 500,
+  "metrics": {
+    "synthetic_clusters": 24
+  },
+  "warning": "Synthetic baseline only. Do not treat as real-world trained model."
+}

@@ -1,0 +1,11 @@
+{
+  "model_key": "citizen_fraud_shield",
+  "trained_at": "2026-07-12T15:33:13.932819Z",
+  "artifact_type": "synthetic_baseline",
+  "source_dataset": "E:\\Sentinel-AI\\ai_models\\synthetic_data\\citizen_shield.csv",
+  "record_count": 500,
+  "metrics": {
+    "synthetic_accuracy_estimate": 0.84
+  },
+  "warning": "Synthetic baseline only. Do not treat as real-world trained model."
+}

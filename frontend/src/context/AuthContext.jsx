@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
+import api from '@/services/api'
 
 const AuthContext = createContext(null)
 
@@ -23,21 +24,22 @@ export function AuthProvider({ children }) {
     }
   }, [user])
 
-  const login = (role, email, name) => {
-    const newUser = {
-      id: `user-${Date.now()}`,
-      name: name || email.split('@')[0].replace('.', ' '),
-      email,
-      role,
-    }
-    setUser(newUser)
-    return ROLE_ROUTES[role]
+  const login = async (role, email, password) => {
+    const result = await api.signIn({ role, email, password })
+    setUser(result.user)
+    return ROLE_ROUTES[result.user.role]
+  }
+
+  const signup = async (role, name, email, password) => {
+    const result = await api.signUp({ role, name, email, password })
+    setUser(result.user)
+    return ROLE_ROUTES[result.user.role]
   }
 
   const logout = () => setUser(null)
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated: !!user }}>
+    <AuthContext.Provider value={{ user, login, signup, logout, isAuthenticated: !!user }}>
       {children}
     </AuthContext.Provider>
   )

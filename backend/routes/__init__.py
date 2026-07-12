@@ -1,9 +1,10 @@
 from fastapi import APIRouter
 
-from backend.routes import alerts, counterfeit, dashboard, fraud_graph, geo, intelligence, reports, scam_detection, users
+from backend.routes import alerts, auth, counterfeit, dashboard, fraud_graph, geo, intelligence, reports, scam_detection, users
 
 
 api_router = APIRouter()
+api_router.include_router(auth.router, prefix="/auth", tags=["auth"])
 api_router.include_router(alerts.router, prefix="/alerts", tags=["alerts"])
 api_router.include_router(counterfeit.router, prefix="/counterfeit", tags=["counterfeit"])
 api_router.include_router(dashboard.router, prefix="/dashboard", tags=["dashboard"])

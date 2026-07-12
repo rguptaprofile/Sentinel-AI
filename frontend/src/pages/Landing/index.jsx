@@ -17,7 +17,6 @@ import {
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import Timeline from '@/components/common/Timeline'
-import chartData from '@/services/data/chartData.json'
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -47,6 +46,12 @@ const timelineSteps = [
   { title: 'Analyze & Correlate', description: 'AI engines analyze patterns, correlate across databases, and build fraud network graphs.' },
   { title: 'Alert & Investigate', description: 'Law enforcement receives prioritized alerts with actionable intelligence and evidence packages.' },
   { title: 'Prevent & Protect', description: 'Proactive measures deployed — account blocks, citizen warnings, and policy recommendations.' },
+]
+
+const landingStats = [
+  { icon: 'shield', value: '5', label: 'Core AI Capability Areas', change: 'Configured for real data sources' },
+  { icon: 'trending', value: 'MongoDB', label: 'Live Persistence Layer', change: 'Connected through backend APIs' },
+  { icon: 'building', value: 'API', label: 'Agency Integration Ready', change: 'Keys loaded from secure env' },
 ]
 
 export default function LandingPage() {
@@ -152,7 +157,7 @@ export default function LandingPage() {
       <section className="py-16 bg-card border-y">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
-            {chartData.landingStats.map((stat, i) => (
+            {landingStats.map((stat, i) => (
               <motion.div key={stat.label} {...fadeUp} transition={{ delay: i * 0.1 }}>
                 <Card className="text-center shadow-lg hover:shadow-xl transition-shadow border-0 bg-gradient-to-br from-card to-muted/30">
                   <CardContent className="pt-8 pb-8">
