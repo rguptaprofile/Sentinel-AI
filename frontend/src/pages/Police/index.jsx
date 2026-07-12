@@ -28,7 +28,7 @@ const recommendations = [
 ]
 
 export default function PoliceDashboard() {
-  const { stats, loading } = useDashboardData('police')
+  const { stats, loading, error } = useDashboardData('police')
 
   return (
     <div className="space-y-6">
@@ -36,6 +36,8 @@ export default function PoliceDashboard() {
         <h1 className="text-2xl font-bold">Police Intelligence Dashboard</h1>
         <p className="text-muted-foreground">Real-time threat monitoring and fraud investigation center</p>
       </div>
+
+      {error && <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">{error}</div>}
 
       {/* Top stat cards */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

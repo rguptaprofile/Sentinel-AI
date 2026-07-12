@@ -1,18 +1,17 @@
 const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api/v1'
 
-const emptyData = {
-  '/dashboard/reports': [],
-  '/dashboard/alerts': [],
-  '/dashboard/transactions': [],
-  '/dashboard/heatmap': [],
-  '/dashboard/charts': {},
-  '/dashboard/network-graph': { nodes: [], edges: [] },
-  '/users/': [],
+function getAuthToken() {
+  return localStorage.getItem('sentinelai_token')
 }
 
 async function fetchJson(path, options = {}) {
+  const token = getAuthToken()
   const response = await fetch(`${API_BASE}${path}`, {
-    headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...(options.headers || {}),
+    },
     ...options,
   })
   if (!response.ok) {
@@ -22,46 +21,41 @@ async function fetchJson(path, options = {}) {
   return response.json()
 }
 
-async function fetchOrEmpty(path) {
-  try {
-    return await fetchJson(path)
-  } catch (error) {
-    console.warn(`API unavailable for ${path}:`, error.message)
-    return emptyData[path] ?? null
-  }
-}
-
 export const api = {
   async getFraudReports() {
-    return fetchOrEmpty('/dashboard/reports')
+    return fetchJson('/dashboard/reports')
   },
 
   async getAlerts() {
-    return fetchOrEmpty('/dashboard/alerts')
+    return fetchJson('/dashboard/alerts')
   },
 
   async getTransactions() {
-    return fetchOrEmpty('/dashboard/transactions')
+    return fetchJson('/dashboard/transactions')
   },
 
   async getHeatmapData() {
-    return fetchOrEmpty('/dashboard/heatmap')
+    return fetchJson('/dashboard/heatmap')
   },
 
   async getChartData() {
-    return fetchOrEmpty('/dashboard/charts')
+    return fetchJson('/dashboard/charts')
   },
 
   async getNetworkGraph() {
-    return fetchOrEmpty('/dashboard/network-graph')
+    return fetchJson('/dashboard/network-graph')
   },
 
   async getUsers() {
-    return fetchOrEmpty('/users/')
+    return fetchJson('/users/')
   },
 
   async getDashboardStats(role) {
-    return fetchOrEmpty(`/dashboard/stats/${role}`)
+    return fetchJson(`/dashboard/stats/${role}`)
+  },
+
+  async getCurrentUser() {
+    return fetchJson('/auth/me')
   },
 
   async signIn(payload) {

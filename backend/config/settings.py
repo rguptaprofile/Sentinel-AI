@@ -4,6 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     app_env: str = "development"
     api_prefix: str = "/api/v1"
+    auth_session_secret: str = "change-me-in-production"
     mongodb_url: str = "mongodb://localhost:27017"
     mongodb_db_name: str = "sentinelai"
     mongodb_timeout_ms: int = 5000

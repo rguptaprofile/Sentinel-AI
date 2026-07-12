@@ -1,10 +1,17 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts'
-import fallbackChartData from '@/services/data/chartData.json'
 import { useChartData } from '@/hooks/useDashboardData'
 
 export default function ScamCategoriesChart() {
-  const { chartData } = useChartData()
-  const data = chartData?.scamCategories?.length ? chartData.scamCategories : fallbackChartData.scamCategories
+  const { chartData, error } = useChartData()
+  const data = chartData?.scamCategories?.length ? chartData.scamCategories : []
+
+  if (error) {
+    return <div className="flex h-[280px] items-center justify-center rounded-xl border bg-card text-sm text-muted-foreground">{error}</div>
+  }
+
+  if (!data.length) {
+    return <div className="flex h-[280px] items-center justify-center rounded-xl border bg-card text-sm text-muted-foreground">No live scam category data yet.</div>
+  }
 
   return (
     <ResponsiveContainer width="100%" height={280}>

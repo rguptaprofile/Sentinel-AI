@@ -14,7 +14,7 @@ import { formatDate } from '@/lib/utils'
 import { RiskBadgeFromSeverity } from '@/components/common/RiskBadge'
 
 export default function NotificationBell() {
-  const { alerts } = useAlerts()
+  const { alerts, error } = useAlerts()
   const unreadCount = alerts.filter((a) => !a.read).length
 
   const severityIcon = {
@@ -42,6 +42,9 @@ export default function NotificationBell() {
           {unreadCount > 0 && <RiskBadgeFromSeverity severity="high" className="text-xs" />}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
+        {error ? (
+          <div className="px-3 py-4 text-sm text-muted-foreground">{error}</div>
+        ) : null}
         <ScrollArea className="h-[300px]">
           {alerts.map((alert) => (
             <DropdownMenuItem key={alert.id} className="flex flex-col items-start gap-1 p-3 cursor-default">

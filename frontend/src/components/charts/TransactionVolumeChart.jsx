@@ -1,10 +1,17 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts'
-import fallbackChartData from '@/services/data/chartData.json'
 import { useChartData } from '@/hooks/useDashboardData'
 
 export default function TransactionVolumeChart() {
-  const { chartData } = useChartData()
-  const data = chartData?.transactionVolume?.length ? chartData.transactionVolume : fallbackChartData.transactionVolume
+  const { chartData, error } = useChartData()
+  const data = chartData?.transactionVolume?.length ? chartData.transactionVolume : []
+
+  if (error) {
+    return <div className="flex h-[280px] items-center justify-center rounded-xl border bg-card text-sm text-muted-foreground">{error}</div>
+  }
+
+  if (!data.length) {
+    return <div className="flex h-[280px] items-center justify-center rounded-xl border bg-card text-sm text-muted-foreground">No live transaction data yet.</div>
+  }
 
   return (
     <ResponsiveContainer width="100%" height={280}>

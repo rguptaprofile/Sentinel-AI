@@ -47,7 +47,7 @@ const levelColors = {
 }
 
 export default function AdminDashboard() {
-  const { stats, loading } = useDashboardData('admin')
+  const { stats, loading, error } = useDashboardData('admin')
 
   return (
     <div className="space-y-6">
@@ -55,6 +55,8 @@ export default function AdminDashboard() {
         <h1 className="text-2xl font-bold">Admin Console</h1>
         <p className="text-muted-foreground">System management, monitoring, and AI model administration</p>
       </div>
+
+      {error && <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">{error}</div>}
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard title="Total Users" value={stats?.totalUsers?.toLocaleString() ?? '—'} change="+234 this week" icon={Users} loading={loading} />

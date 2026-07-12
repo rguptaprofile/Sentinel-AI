@@ -1,0 +1,1595 @@
+[2m9:00:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/services/api.js (resolved id: E:/Sentinel-AI/frontend/src/services/api.js) in E:/Sentinel-AI/frontend/src/components/maps/IndiaHeatMap.jsx. Does the file exist?
+[2m9:00:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/services/api.js (resolved id: E:/Sentinel-AI/frontend/src/services/api.js) in E:/Sentinel-AI/frontend/src/components/maps/IndiaHeatMap.jsx. Does the file exist?
+[2m9:00:24 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/services/api.js (resolved id: E:/Sentinel-AI/frontend/src/services/api.js) in E:/Sentinel-AI/frontend/src/components/maps/IndiaHeatMap.jsx. Does the file exist?
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m9:05:15 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:17 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m9:05:18 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m9:05:20 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m9:05:23 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:25 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:25 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:25 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:05:25 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:25 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:05:25 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:25 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:05:25 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:26 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:05:26 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:26 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m9:05:26 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:28 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+[2m9:05:28 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/FraudTrendChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx[39m:2:30
+[33m  1  |  import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/FraudTrendChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:28 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:05:28 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:28 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:05:28 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:28 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:05:28 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:29 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:05:29 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:05:29 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m9:05:29 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m9:06:02 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m10:11:06 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+[2m10:11:12 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/PerformanceChart.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx[39m:2:30
+[33m  1  |  import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/PerformanceChart.jsx";[39m
+      at TransformPluginContext._formatLog (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29960:39)
+      at TransformPluginContext.error (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29957:14)
+      at normalizeUrl (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:26993:18)
+      at async file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27056:30
+      at async Promise.all (index 1)
+      at async TransformPluginContext.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:27024:4)
+      at async EnvironmentPluginContainer.transform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:29745:14)
+      at async loadAndTransform (file:///E:/Sentinel-AI/frontend/node_modules/vite/dist/node/chunks/node.js:19729:26)
+[2m10:11:33 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ScamCategoriesChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx[39m:2:30
+[33m  1  |  import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ScamCategoriesChart.jsx";[39m
+[2m10:11:33 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/TransactionVolumeChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/TransactionVolumeChart.jsx";[39m
+[2m10:11:33 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/ReportsByStateChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/ReportsByStateChart.jsx";[39m
+[2m10:11:33 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/services/data/chartData.json" from "src/components/charts/RiskDistributionChart.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mE:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx[39m:2:30
+[33m  1  |  import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
+  2  |  import fallbackChartData from "@/services/data/chartData.json";
+     |                                 ^
+  3  |  import { useChartData } from "@/hooks/useDashboardData";
+  4  |  var _jsxFileName = "E:/Sentinel-AI/frontend/src/components/charts/RiskDistributionChart.jsx";[39m

@@ -21,10 +21,23 @@ function getIntensityColor(intensity) {
 export default function IndiaHeatMap({ height = '100%' }) {
   const [ready, setReady] = useState(false)
   const [points, setPoints] = useState([])
+  const [error, setError] = useState('')
 
   useEffect(() => {
     setReady(true)
-    api.getHeatmapData().then((data) => setPoints(data?.length ? data : []))
+    let mounted = true
+    api.getHeatmapData()
+      .then((data) => {
+        if (mounted) {
+          setPoints(data?.length ? data : [])
+        }
+      })
+      .catch((err) => {
+        if (mounted) {
+          setError(err.message)
+        }
+      })
+    return () => { mounted = false }
   }, [])
 
   if (!ready) {
@@ -33,6 +46,14 @@ export default function IndiaHeatMap({ height = '100%' }) {
         <LoadingSpinner />
       </div>
     )
+  }
+
+  if (error) {
+    return <div className="flex items-center justify-center h-full min-h-[300px] bg-muted/30 rounded-xl text-sm text-muted-foreground">{error}</div>
+  }
+
+  if (!points.length) {
+    return <div className="flex items-center justify-center h-full min-h-[300px] bg-muted/30 rounded-xl text-sm text-muted-foreground">No live heatmap data yet.</div>
   }
 
   return (

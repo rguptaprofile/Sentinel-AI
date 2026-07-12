@@ -35,9 +35,17 @@ export default function AlertCard({ alert, className }) {
 }
 
 export function LiveAlerts({ compact = false }) {
-  const { alerts, loading } = useAlerts()
+  const { alerts, loading, error } = useAlerts()
 
   if (loading) return <LoadingSpinner size="sm" />
+
+  if (error) {
+    return <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">{error}</div>
+  }
+
+  if (!alerts.length) {
+    return <div className="rounded-xl border bg-card p-4 text-sm text-muted-foreground">No live alerts available.</div>
+  }
 
   return (
     <div className={cn('space-y-3', compact && 'space-y-2')}>

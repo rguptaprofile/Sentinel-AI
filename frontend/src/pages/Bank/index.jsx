@@ -13,7 +13,7 @@ import { TransactionsTable } from '@/components/common/DataTable'
 import { useDashboardData } from '@/hooks/useDashboardData'
 
 export default function BankDashboard() {
-  const { stats, loading } = useDashboardData('bank')
+  const { stats, loading, error } = useDashboardData('bank')
 
   return (
     <div className="space-y-6">
@@ -21,6 +21,8 @@ export default function BankDashboard() {
         <h1 className="text-2xl font-bold">Bank Fraud Monitoring Center</h1>
         <p className="text-muted-foreground">Real-time transaction analysis and fraud prevention</p>
       </div>
+
+      {error && <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">{error}</div>}
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard title="Suspicious Transactions" value={stats?.suspiciousTransactions ?? '—'} change="+12 today" icon={AlertTriangle} loading={loading} />

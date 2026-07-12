@@ -37,7 +37,7 @@ const safetyTips = [
 ]
 
 export default function CitizenDashboard() {
-  const { stats, loading } = useDashboardData('citizen')
+  const { stats, loading, error } = useDashboardData('citizen')
 
   return (
     <div className="space-y-6">
@@ -45,6 +45,8 @@ export default function CitizenDashboard() {
         <h1 className="text-2xl font-bold">Citizen Safety Portal</h1>
         <p className="text-muted-foreground">Protect yourself with AI-powered verification and reporting tools</p>
       </div>
+
+      {error && <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">{error}</div>}
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard title="Nearby Scams" value={stats?.nearbyScams ?? '—'} change="Within 5km" icon={MapPin} loading={loading} />

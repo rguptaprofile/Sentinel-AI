@@ -12,15 +12,34 @@ const nodeColors = {
 
 export default function FraudNetworkGraph() {
   const [graph, setGraph] = useState({ nodes: [], edges: [] })
+  const [error, setError] = useState('')
   const { nodes, edges } = graph
   const width = 700
   const height = 400
 
   useEffect(() => {
-    api.getNetworkGraph().then((data) => {
-      setGraph(data?.nodes?.length ? data : { nodes: [], edges: [] })
-    })
+    let mounted = true
+    api.getNetworkGraph()
+      .then((data) => {
+        if (mounted) {
+          setGraph(data?.nodes?.length ? data : { nodes: [], edges: [] })
+        }
+      })
+      .catch((err) => {
+        if (mounted) {
+          setError(err.message)
+        }
+      })
+    return () => { mounted = false }
   }, [])
+
+  if (error) {
+    return <div className="flex h-[350px] items-center justify-center rounded-xl border bg-card text-sm text-muted-foreground">{error}</div>
+  }
+
+  if (!nodes.length) {
+    return <div className="flex h-[350px] items-center justify-center rounded-xl border bg-card text-sm text-muted-foreground">No live fraud graph data yet.</div>
+  }
 
   return (
     <div className="relative w-full overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 p-4">
