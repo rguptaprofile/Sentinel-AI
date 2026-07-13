@@ -4,11 +4,7 @@ function resolveApiBase() {
     return configuredBase.replace(/\/$/, '')
   }
 
-  if (import.meta.env.PROD) {
-    return ''
-  }
-
-  return 'https://sentinel-in.vercel.app/api/v1'
+  return import.meta.env.PROD ? '/api/v1' : 'http://127.0.0.1:8000/api/v1'
 }
 
 const API_BASE = resolveApiBase()
@@ -18,10 +14,6 @@ function getAuthToken() {
 }
 
 async function fetchJson(path, options = {}) {
-  if (!API_BASE) {
-    throw new Error('API base URL is not configured. Set VITE_API_BASE_URL to your deployed backend endpoint.')
-  }
-
   const token = getAuthToken()
   const response = await fetch(`${API_BASE}${path}`, {
     headers: {

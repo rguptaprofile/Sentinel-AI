@@ -56,7 +56,8 @@ https://<your-backend-domain>/docs
 In Vercel Project Settings > Environment Variables, set:
 
 ```text
-VITE_API_BASE_URL=https://<your-backend-domain>/api/v1
+BACKEND_API_BASE_URL=https://<your-backend-domain>
+VITE_API_BASE_URL=/api/v1
 ```
 
 Then redeploy the frontend.
@@ -72,7 +73,7 @@ https://sentinel-in.vercel.app
 The frontend should call:
 
 ```text
-https://<your-backend-domain>/api/v1/dashboard/stats/police
+/api/v1/dashboard/stats/police
 ```
 
 The backend will read/write MongoDB through the configured `MONGODB_URL`.
