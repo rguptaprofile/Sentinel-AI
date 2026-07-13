@@ -130,6 +130,12 @@ function serializeUser(user) {
 }
 
 async function handleAuthRoute(path, req, res) {
+  if (path.startsWith('auth/') && req.method === 'OPTIONS') {
+    res.setHeader('Allow', 'GET,POST,OPTIONS')
+    res.status(204).end()
+    return true
+  }
+
   const db = await getDatabase()
   const users = db.collection(USERS_COLLECTION)
 
@@ -213,6 +219,12 @@ async function handleAuthRoute(path, req, res) {
     }
 
     res.status(200).json({ user: serializeUser(user) })
+    return true
+  }
+
+  if (path === 'auth/signup' || path === 'auth/signin' || path === 'auth/me') {
+    res.setHeader('Allow', 'GET,POST,OPTIONS')
+    res.status(405).json({ detail: `Method ${req.method} is not allowed for ${path}.` })
     return true
   }
 
