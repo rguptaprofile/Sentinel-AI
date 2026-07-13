@@ -25,6 +25,7 @@ MONGODB_URL=<your MongoDB Atlas connection string>
 MONGODB_DB_NAME=sentinel-ai
 MONGODB_TIMEOUT_MS=10000
 CORS_ORIGINS=["https://sentinel-in.vercel.app"]
+AUTH_SESSION_SECRET=<strong-random-secret>
 ```
 
 Do not commit `.env`.
@@ -58,6 +59,9 @@ In Vercel Project Settings > Environment Variables, set:
 ```text
 BACKEND_API_BASE_URL=https://<your-backend-domain>
 VITE_API_BASE_URL=/api/v1
+AUTH_SESSION_SECRET=<strong-random-secret>
+MONGODB_URL=<your MongoDB Atlas connection string>
+MONGODB_DB_NAME=sentinel-ai
 ```
 
 Then redeploy the frontend.

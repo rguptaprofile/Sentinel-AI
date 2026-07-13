@@ -67,6 +67,7 @@ MONGODB_TIMEOUT_MS=10000
 CORS_ORIGINS=["https://sentinel-in.vercel.app"]
 VITE_API_BASE_URL=/api/v1
 BACKEND_API_BASE_URL=https://<backend-domain>
+AUTH_SESSION_SECRET=<strong-random-secret>
 ```
 
 Optional real-data API keys:
@@ -218,6 +219,9 @@ CORS_ORIGINS=["https://sentinel-in.vercel.app"]
 ```text
 VITE_API_BASE_URL=/api/v1
 BACKEND_API_BASE_URL=https://<backend-domain>
+AUTH_SESSION_SECRET=<strong-random-secret>
+MONGODB_URL=<mongodb-atlas-connection-string>
+MONGODB_DB_NAME=sentinel-ai
 ```
 
 4. Redeploy Vercel frontend.
