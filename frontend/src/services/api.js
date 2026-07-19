@@ -3,27 +3,43 @@ function resolveApiBase() {
   if (configuredBase) {
     const normalizedBase = configuredBase.replace(/\/$/, '')
     if (import.meta.env.PROD && !/^https?:\/\//i.test(normalizedBase)) {
-      throw new Error('VITE_API_BASE_URL must be the deployed backend URL, not a relative path like /api/v1.')
+      return {
+        baseUrl: '',
+        error: 'VITE_API_BASE_URL must be the deployed backend URL, not a relative path like /api/v1.',
+      }
     }
-    return normalizedBase.endsWith('/api/v1') ? normalizedBase : `${normalizedBase}/api/v1`
+    return {
+      baseUrl: normalizedBase.endsWith('/api/v1') ? normalizedBase : `${normalizedBase}/api/v1`,
+      error: '',
+    }
   }
 
   if (import.meta.env.PROD) {
-    throw new Error('VITE_API_BASE_URL must be set to the deployed backend URL, for example https://your-backend.example.com/api/v1.')
+    return {
+      baseUrl: '',
+      error: 'VITE_API_BASE_URL must be set to the deployed backend URL, for example https://your-backend.example.com/api/v1.',
+    }
   }
 
-  return 'http://127.0.0.1:8000/api/v1'
+  return {
+    baseUrl: 'http://127.0.0.1:8000/api/v1',
+    error: '',
+  }
 }
 
-const API_BASE = resolveApiBase()
+const API_CONFIG = resolveApiBase()
 
 function getAuthToken() {
   return localStorage.getItem('sentinelai_token')
 }
 
 async function fetchJson(path, options = {}) {
+  if (API_CONFIG.error) {
+    throw new Error(API_CONFIG.error)
+  }
+
   const token = getAuthToken()
-  const url = `${API_BASE}${path}`
+  const url = `${API_CONFIG.baseUrl}${path}`
   const response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
