@@ -2,12 +2,6 @@ function resolveApiBase() {
   const configuredBase = import.meta.env.VITE_API_BASE_URL
   if (configuredBase) {
     const normalizedBase = configuredBase.replace(/\/$/, '')
-    if (import.meta.env.PROD && !/^https?:\/\//i.test(normalizedBase)) {
-      return {
-        baseUrl: '',
-        error: 'VITE_API_BASE_URL must be the deployed backend URL, not a relative path like /api/v1.',
-      }
-    }
     return {
       baseUrl: normalizedBase.endsWith('/api/v1') ? normalizedBase : `${normalizedBase}/api/v1`,
       error: '',
