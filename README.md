@@ -219,12 +219,15 @@ CORS_ORIGINS=["https://sentinel-in.vercel.app"]
 VITE_API_BASE_URL=https://<backend-domain>/api/v1
 ```
 
+Do not use `/api/v1` for `VITE_API_BASE_URL` on Vercel. Production auth must call the deployed FastAPI backend directly.
+
 4. Redeploy Vercel frontend.
 
 5. Verify:
 
 ```text
 https://<backend-domain>/health
+https://<backend-domain>/api/v1/auth/signin
 https://sentinel-in.vercel.app
 ```
 

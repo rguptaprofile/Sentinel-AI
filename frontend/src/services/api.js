@@ -1,11 +1,15 @@
 function resolveApiBase() {
   const configuredBase = import.meta.env.VITE_API_BASE_URL
   if (configuredBase) {
-    return configuredBase.replace(/\/$/, '')
+    const normalizedBase = configuredBase.replace(/\/$/, '')
+    if (import.meta.env.PROD && !/^https?:\/\//i.test(normalizedBase)) {
+      throw new Error('VITE_API_BASE_URL must be the deployed backend URL, not a relative path like /api/v1.')
+    }
+    return normalizedBase.endsWith('/api/v1') ? normalizedBase : `${normalizedBase}/api/v1`
   }
 
   if (import.meta.env.PROD) {
-    throw new Error('VITE_API_BASE_URL must be set to the deployed backend URL, for example https://your-backend.example.com/api/v1')
+    throw new Error('VITE_API_BASE_URL must be set to the deployed backend URL, for example https://your-backend.example.com/api/v1.')
   }
 
   return 'http://127.0.0.1:8000/api/v1'
@@ -19,7 +23,8 @@ function getAuthToken() {
 
 async function fetchJson(path, options = {}) {
   const token = getAuthToken()
-  const response = await fetch(`${API_BASE}${path}`, {
+  const url = `${API_BASE}${path}`
+  const response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
@@ -29,6 +34,9 @@ async function fetchJson(path, options = {}) {
   })
   if (!response.ok) {
     const error = await response.json().catch(() => ({ detail: `API ${response.status}` }))
+    if (response.status === 404 && path.startsWith('/auth/')) {
+      throw new Error(`Auth API route was not found at ${url}. Check VITE_API_BASE_URL and backend deployment.`)
+    }
     throw new Error(error.detail || `API ${response.status}`)
   }
   return response.json()

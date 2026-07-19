@@ -60,6 +60,8 @@ In Vercel Project Settings > Environment Variables, set:
 VITE_API_BASE_URL=https://<your-backend-domain>/api/v1
 ```
 
+Do not set `VITE_API_BASE_URL` to `/api/v1` in production. That makes the browser call Vercel instead of the FastAPI backend and causes 404 errors for signup/signin.
+
 Then redeploy the frontend.
 
 ## 4. Verification
@@ -74,6 +76,13 @@ The frontend should call:
 
 ```text
 https://<your-backend-domain>/api/v1/dashboard/stats/police
+```
+
+Auth endpoints should respond from the backend, not Vercel:
+
+```text
+https://<your-backend-domain>/api/v1/auth/signup
+https://<your-backend-domain>/api/v1/auth/signin
 ```
 
 The backend will read/write MongoDB through the configured `MONGODB_URL`.
