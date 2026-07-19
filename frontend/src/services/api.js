@@ -44,9 +44,6 @@ async function fetchJson(path, options = {}) {
   })
   if (!response.ok) {
     const error = await response.json().catch(() => ({ detail: `API ${response.status}` }))
-    if (response.status === 404 && path.startsWith('/auth/')) {
-      throw new Error(`Auth API route was not found at ${url}. Check VITE_API_BASE_URL and backend deployment.`)
-    }
     throw new Error(error.detail || `API ${response.status}`)
   }
   return response.json()

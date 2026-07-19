@@ -151,6 +151,12 @@ async function handleAuthRoute(path, req, res) {
   const users = db.collection(USERS_COLLECTION)
 
   if (path === 'auth/signup') {
+    if (req.method === 'GET') {
+      res.setHeader('Allow', 'POST,OPTIONS')
+      res.status(200).json({ status: 'ok', route: '/api/v1/auth/signup', method: 'POST' })
+      return true
+    }
+
     if (req.method !== 'POST') {
       res.setHeader('Allow', 'POST,OPTIONS')
       res.status(405).json({ detail: 'Use POST for signup.' })
@@ -199,6 +205,12 @@ async function handleAuthRoute(path, req, res) {
   }
 
   if (path === 'auth/signin') {
+    if (req.method === 'GET') {
+      res.setHeader('Allow', 'POST,OPTIONS')
+      res.status(200).json({ status: 'ok', route: '/api/v1/auth/signin', method: 'POST' })
+      return true
+    }
+
     if (req.method !== 'POST') {
       res.setHeader('Allow', 'POST,OPTIONS')
       res.status(405).json({ detail: 'Use POST for signin.' })
