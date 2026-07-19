@@ -10,8 +10,8 @@ function resolveApiBase() {
 
   if (import.meta.env.PROD) {
     return {
-      baseUrl: '',
-      error: 'VITE_API_BASE_URL must be set to the deployed backend URL, for example https://your-backend.example.com/api/v1.',
+      baseUrl: '/api/v1',
+      error: '',
     }
   }
 

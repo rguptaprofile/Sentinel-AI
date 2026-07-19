@@ -9,7 +9,8 @@ https://sentinel-in.vercel.app
 The browser cannot connect directly to MongoDB. The correct production path is:
 
 ```text
-Vercel frontend -> VITE_API_BASE_URL -> deployed FastAPI backend -> MongoDB Atlas
+Vercel frontend -> /api/v1/auth on Vercel -> MongoDB Atlas
+Vercel frontend -> /api/v1 non-auth proxy -> deployed FastAPI backend
 ```
 
 ## 1. MongoDB
@@ -57,10 +58,14 @@ https://<your-backend-domain>/docs
 In Vercel Project Settings > Environment Variables, set:
 
 ```text
-VITE_API_BASE_URL=https://<your-backend-domain>/api/v1
+VITE_API_BASE_URL=/api/v1
+MONGODB_URL=<your MongoDB Atlas connection string>
+MONGODB_DB_NAME=sentinel-ai
+AUTH_SESSION_SECRET=<strong-random-secret>
+BACKEND_API_BASE_URL=https://<your-backend-domain>
 ```
 
-Do not set `VITE_API_BASE_URL` to `/api/v1` in production. That makes the browser call Vercel instead of the FastAPI backend and causes 404 errors for signup/signin.
+Signup, signin, and `/auth/me` are served by Vercel API routes and write to MongoDB directly. Other `/api/v1/*` requests are proxied to `BACKEND_API_BASE_URL`.
 
 Then redeploy the frontend.
 
@@ -75,14 +80,14 @@ https://sentinel-in.vercel.app
 The frontend should call:
 
 ```text
-https://<your-backend-domain>/api/v1/dashboard/stats/police
+https://sentinel-in.vercel.app/api/v1/dashboard/stats/police
 ```
 
-Auth endpoints should respond from the backend, not Vercel:
+Auth endpoints should respond from the Vercel API route:
 
 ```text
-https://<your-backend-domain>/api/v1/auth/signup
-https://<your-backend-domain>/api/v1/auth/signin
+https://sentinel-in.vercel.app/api/v1/auth/signup
+https://sentinel-in.vercel.app/api/v1/auth/signin
 ```
 
 The backend will read/write MongoDB through the configured `MONGODB_URL`.
