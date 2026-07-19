@@ -9,7 +9,7 @@ https://sentinel-in.vercel.app
 The browser cannot connect directly to MongoDB. The correct production path is:
 
 ```text
-Vercel frontend -> deployed FastAPI backend -> MongoDB Atlas
+Vercel frontend -> VITE_API_BASE_URL -> deployed FastAPI backend -> MongoDB Atlas
 ```
 
 ## 1. MongoDB
@@ -57,11 +57,7 @@ https://<your-backend-domain>/docs
 In Vercel Project Settings > Environment Variables, set:
 
 ```text
-BACKEND_API_BASE_URL=https://<your-backend-domain>
-VITE_API_BASE_URL=/api/v1
-AUTH_SESSION_SECRET=<strong-random-secret>
-MONGODB_URL=<your MongoDB Atlas connection string>
-MONGODB_DB_NAME=sentinel-ai
+VITE_API_BASE_URL=https://<your-backend-domain>/api/v1
 ```
 
 Then redeploy the frontend.
@@ -77,7 +73,7 @@ https://sentinel-in.vercel.app
 The frontend should call:
 
 ```text
-/api/v1/dashboard/stats/police
+https://<your-backend-domain>/api/v1/dashboard/stats/police
 ```
 
 The backend will read/write MongoDB through the configured `MONGODB_URL`.

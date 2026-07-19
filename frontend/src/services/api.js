@@ -4,7 +4,11 @@ function resolveApiBase() {
     return configuredBase.replace(/\/$/, '')
   }
 
-  return import.meta.env.PROD ? '/api/v1' : 'http://127.0.0.1:8000/api/v1'
+  if (import.meta.env.PROD) {
+    throw new Error('VITE_API_BASE_URL must be set to the deployed backend URL, for example https://your-backend.example.com/api/v1')
+  }
+
+  return 'http://127.0.0.1:8000/api/v1'
 }
 
 const API_BASE = resolveApiBase()

@@ -13,7 +13,7 @@ https://sentinel-in.vercel.app
 ```text
 Vercel React frontend
   |
-  | /api/v1 (same-origin proxy on Vercel)
+  | VITE_API_BASE_URL=https://<backend-domain>/api/v1
   v
 FastAPI backend
   |
@@ -65,8 +65,7 @@ MONGODB_URL=<mongodb-atlas-connection-string>
 MONGODB_DB_NAME=sentinel-ai
 MONGODB_TIMEOUT_MS=10000
 CORS_ORIGINS=["https://sentinel-in.vercel.app"]
-VITE_API_BASE_URL=/api/v1
-BACKEND_API_BASE_URL=https://<backend-domain>
+VITE_API_BASE_URL=https://<backend-domain>/api/v1
 AUTH_SESSION_SECRET=<strong-random-secret>
 ```
 
@@ -217,11 +216,7 @@ CORS_ORIGINS=["https://sentinel-in.vercel.app"]
 3. Set Vercel frontend env:
 
 ```text
-VITE_API_BASE_URL=/api/v1
-BACKEND_API_BASE_URL=https://<backend-domain>
-AUTH_SESSION_SECRET=<strong-random-secret>
-MONGODB_URL=<mongodb-atlas-connection-string>
-MONGODB_DB_NAME=sentinel-ai
+VITE_API_BASE_URL=https://<backend-domain>/api/v1
 ```
 
 4. Redeploy Vercel frontend.

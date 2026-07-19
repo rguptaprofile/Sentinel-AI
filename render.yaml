@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: sentinel-ai-backend
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: API_PREFIX
+        value: /api/v1
+      - key: MONGODB_URL
+        sync: false
+      - key: MONGODB_DB_NAME
+        value: sentinel-ai
+      - key: MONGODB_TIMEOUT_MS
+        value: 10000
+      - key: AUTH_SESSION_SECRET
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: '["https://sentinel-in.vercel.app"]'
