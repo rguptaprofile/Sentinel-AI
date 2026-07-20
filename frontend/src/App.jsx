@@ -11,6 +11,8 @@ import CitizenDashboard from '@/pages/Citizen'
 import PoliceDashboard from '@/pages/Police'
 import BankDashboard from '@/pages/Bank'
 import AdminDashboard from '@/pages/Admin'
+import AnalyticsPage from '@/pages/Analytics'
+import SettingsPage from '@/pages/Settings'
 
 export default function App() {
   return (
@@ -29,6 +31,8 @@ export default function App() {
                 <Route path="police" element={<PoliceDashboard />} />
                 <Route path="bank" element={<BankDashboard />} />
                 <Route path="admin" element={<AdminDashboard />} />
+                <Route path="analytics" element={<AnalyticsPage />} />
+                <Route path="settings" element={<SettingsPage />} />
               </Route>
             </Route>
 

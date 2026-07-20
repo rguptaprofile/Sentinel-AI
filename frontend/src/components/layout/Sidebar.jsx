@@ -22,8 +22,8 @@ const navItems = [
   { label: 'Police', icon: Users, path: '/dashboard/police' },
   { label: 'Bank', icon: Landmark, path: '/dashboard/bank' },
   { label: 'Admin', icon: Building2, path: '/dashboard/admin' },
-  { label: 'Analytics', icon: BarChart3, path: '/dashboard/police' },
-  { label: 'Settings', icon: Settings, path: '/dashboard' },
+  { label: 'Analytics', icon: BarChart3, path: '/dashboard/analytics' },
+  { label: 'Settings', icon: Settings, path: '/dashboard/settings' },
 ]
 
 export default function Sidebar({ collapsed, onToggle, className }) {
