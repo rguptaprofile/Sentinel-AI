@@ -100,6 +100,10 @@ export const api = {
     return fetchJson(`/dashboard/stats/${role}`)
   },
 
+  async getCapabilityStatus() {
+    return fetchJson('/capabilities/status')
+  },
+
   async getCurrentUser() {
     return fetchJson('/auth/me')
   },
