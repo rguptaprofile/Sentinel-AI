@@ -28,11 +28,7 @@ function resolveApiBase() {
 
   if (configuredBase) {
     return {
-<<<<<<< Updated upstream
       baseUrl: configuredBase.endsWith('/api/v1') ? configuredBase : `${configuredBase}/api/v1`,
-=======
-      baseUrl: '',
->>>>>>> Stashed changes
       error: '',
       demoMode: true,
     }
