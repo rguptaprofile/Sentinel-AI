@@ -1,16 +1,35 @@
 function resolveApiBase() {
-  const configuredBase = import.meta.env.VITE_API_BASE_URL
-  if (configuredBase) {
-    const normalizedBase = configuredBase.replace(/\/$/, '')
+  const configuredBase = (import.meta.env.VITE_API_BASE_URL || '').trim().replace(/\/$/, '')
+
+  // Production auth is handled by the Vercel function at the same origin.
+  // A browser running on Vercel must never use localhost/127.0.0.1:8000:
+  // that address refers to the visitor's own computer, not this API.
+  if (import.meta.env.PROD) {
+    if (!configuredBase || configuredBase === '/api/v1') {
+      return { baseUrl: '/api/v1', error: '' }
+    }
+
+    const isLoopback = /(^|:\/\/)(localhost|127\.0\.0\.1)(:|\/|$)/i.test(configuredBase)
+    if (isLoopback) {
+      return { baseUrl: '/api/v1', error: '' }
+    }
+
+    if (!/^https:\/\//i.test(configuredBase)) {
+      return {
+        baseUrl: '',
+        error: 'VITE_API_BASE_URL must be /api/v1 or a public HTTPS API URL.',
+      }
+    }
+
     return {
-      baseUrl: normalizedBase.endsWith('/api/v1') ? normalizedBase : `${normalizedBase}/api/v1`,
+      baseUrl: configuredBase.endsWith('/api/v1') ? configuredBase : `${configuredBase}/api/v1`,
       error: '',
     }
   }
 
-  if (import.meta.env.PROD) {
+  if (configuredBase) {
     return {
-      baseUrl: '/api/v1',
+      baseUrl: configuredBase.endsWith('/api/v1') ? configuredBase : `${configuredBase}/api/v1`,
       error: '',
     }
   }
@@ -44,6 +63,9 @@ async function fetchJson(path, options = {}) {
   })
   if (!response.ok) {
     const error = await response.json().catch(() => ({ detail: `API ${response.status}` }))
+    if (response.status === 404 && path.startsWith('/auth/')) {
+      throw new Error(`Auth API route was not found at ${url}. Redeploy Vercel with the api/v1 function included.`)
+    }
     throw new Error(error.detail || `API ${response.status}`)
   }
   return response.json()

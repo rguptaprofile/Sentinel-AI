@@ -60,10 +60,19 @@ In Vercel Project Settings > Environment Variables, set:
 ```text
 VITE_API_BASE_URL=/api/v1
 MONGODB_URL=<your MongoDB Atlas connection string>
-MONGODB_DB_NAME=sentinel-ai
+MONGODB_DB_NAME=<your database name>
 AUTH_SESSION_SECRET=<strong-random-secret>
 BACKEND_API_BASE_URL=https://<your-backend-domain>
 ```
+
+`MONGODB_DB_NAME` and `AUTH_SESSION_SECRET` must have the same values in both
+Render and Vercel. The shared session secret lets the deployed FastAPI API
+verify the bearer token issued by the Vercel auth route.
+
+Do not set `VITE_API_BASE_URL` to `http://127.0.0.1:8000` or `localhost` in
+Vercel. Those addresses only work during local development and point to each
+visitor's device once the frontend is deployed. The production default is the
+same-origin Vercel route, `/api/v1`.
 
 Signup, signin, and `/auth/me` are served by Vercel API routes and write to MongoDB directly. Other `/api/v1/*` requests are proxied to `BACKEND_API_BASE_URL`.
 
