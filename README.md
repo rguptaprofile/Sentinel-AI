@@ -13,7 +13,7 @@ https://sentinel-in.vercel.app
 ```text
 Vercel React frontend
   |
-  | /api/v1/auth/* on Vercel, /api/v1/* proxied to backend
+  | deployed FastAPI backend /api/v1/*
   v
 MongoDB-backed auth and FastAPI backend APIs
   |
@@ -65,8 +65,7 @@ MONGODB_URL=<mongodb-atlas-connection-string>
 MONGODB_DB_NAME=sentinel-ai
 MONGODB_TIMEOUT_MS=10000
 CORS_ORIGINS=["https://sentinel-in.vercel.app"]
-VITE_API_BASE_URL=/api/v1
-BACKEND_API_BASE_URL=https://<backend-domain>
+VITE_API_BASE_URL=https://sentinel-ai-backend-qw3h.onrender.com
 AUTH_SESSION_SECRET=<strong-random-secret>
 ```
 
@@ -217,14 +216,13 @@ CORS_ORIGINS=["https://sentinel-in.vercel.app"]
 3. Set Vercel frontend env:
 
 ```text
-VITE_API_BASE_URL=/api/v1
+VITE_API_BASE_URL=https://sentinel-ai-backend-qw3h.onrender.com
 MONGODB_URL=<mongodb-atlas-connection-string>
 MONGODB_DB_NAME=sentinel-ai
 AUTH_SESSION_SECRET=<strong-random-secret>
-BACKEND_API_BASE_URL=https://<backend-domain>
 ```
 
-`BACKEND_API_BASE_URL` is only needed for non-auth API proxying. Signup, signin, and `/auth/me` work through the Vercel API route and write to MongoDB directly.
+Signup, signin, `/auth/me`, and all other API calls use the deployed FastAPI backend directly.
 
 4. Redeploy Vercel frontend.
 

@@ -1,24 +1,23 @@
+const DEPLOYED_API_BASE_URL = 'https://sentinel-ai-backend-qw3h.onrender.com/api/v1'
+
 function resolveApiBase() {
   const configuredBase = (import.meta.env.VITE_API_BASE_URL || '').trim().replace(/\/$/, '')
 
-  // Production auth is handled by the Vercel function at the same origin.
-  // A browser running on Vercel must never use localhost/127.0.0.1:8000:
-  // that address refers to the visitor's own computer, not this API.
+  // Auth and application APIs are served by FastAPI on Render. This avoids a
+  // Vercel serverless-function dependency (and its corresponding 404s).
   if (import.meta.env.PROD) {
     if (!configuredBase || configuredBase === '/api/v1') {
-      return { baseUrl: '/api/v1', error: '' }
+      return { baseUrl: DEPLOYED_API_BASE_URL, error: '' }
     }
 
     const isLoopback = /(^|:\/\/)(localhost|127\.0\.0\.1)(:|\/|$)/i.test(configuredBase)
-    if (isLoopback) {
-      return { baseUrl: '/api/v1', error: '' }
+    const isFrontendUrl = /sentinel-in\.vercel\.app/i.test(configuredBase)
+    if (isLoopback || isFrontendUrl) {
+      return { baseUrl: DEPLOYED_API_BASE_URL, error: '' }
     }
 
     if (!/^https:\/\//i.test(configuredBase)) {
-      return {
-        baseUrl: '',
-        error: 'VITE_API_BASE_URL must be /api/v1 or a public HTTPS API URL.',
-      }
+      return { baseUrl: DEPLOYED_API_BASE_URL, error: '' }
     }
 
     return {
@@ -35,7 +34,7 @@ function resolveApiBase() {
   }
 
   return {
-    baseUrl: 'https://sentinel-ai-backend-qw3h.onrender.com/api/v1',
+    baseUrl: DEPLOYED_API_BASE_URL,
     error: '',
   }
 }
@@ -63,9 +62,6 @@ async function fetchJson(path, options = {}) {
   })
   if (!response.ok) {
     const error = await response.json().catch(() => ({ detail: `API ${response.status}` }))
-    if (response.status === 404 && path.startsWith('/auth/')) {
-      throw new Error(`Auth API route was not found at ${url}. Redeploy Vercel with the api/v1 function included.`)
-    }
     throw new Error(error.detail || `API ${response.status}`)
   }
   return response.json()

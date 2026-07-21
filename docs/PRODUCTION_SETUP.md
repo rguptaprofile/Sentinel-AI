@@ -9,8 +9,7 @@ https://sentinel-in.vercel.app
 The browser cannot connect directly to MongoDB. The correct production path is:
 
 ```text
-Vercel frontend -> /api/v1/auth on Vercel -> MongoDB Atlas
-Vercel frontend -> /api/v1 non-auth proxy -> deployed FastAPI backend
+Vercel frontend -> deployed FastAPI backend -> MongoDB Atlas
 ```
 
 ## 1. MongoDB
@@ -58,23 +57,15 @@ https://<your-backend-domain>/docs
 In Vercel Project Settings > Environment Variables, set:
 
 ```text
-VITE_API_BASE_URL=/api/v1
-MONGODB_URL=<your MongoDB Atlas connection string>
-MONGODB_DB_NAME=<your database name>
-AUTH_SESSION_SECRET=<strong-random-secret>
-BACKEND_API_BASE_URL=https://<your-backend-domain>
+VITE_API_BASE_URL=https://sentinel-ai-backend-qw3h.onrender.com
 ```
-
-`MONGODB_DB_NAME` and `AUTH_SESSION_SECRET` must have the same values in both
-Render and Vercel. The shared session secret lets the deployed FastAPI API
-verify the bearer token issued by the Vercel auth route.
 
 Do not set `VITE_API_BASE_URL` to a loopback address in Vercel. A loopback URL
 only works during local development and points to each visitor's device once
-the frontend is deployed. The production default is the same-origin Vercel
-route, `/api/v1`.
+the frontend is deployed.
 
-Signup, signin, and `/auth/me` are served by Vercel API routes and write to MongoDB directly. Other `/api/v1/*` requests are proxied to `BACKEND_API_BASE_URL`.
+Signup, signin, `/auth/me`, and all other API routes are served directly by the
+deployed FastAPI backend.
 
 Then redeploy the frontend.
 
@@ -89,14 +80,14 @@ https://sentinel-in.vercel.app
 The frontend should call:
 
 ```text
-https://sentinel-in.vercel.app/api/v1/dashboard/stats/police
+https://sentinel-ai-backend-qw3h.onrender.com/api/v1/dashboard/stats/police
 ```
 
-Auth endpoints should respond from the Vercel API route:
+Auth endpoints should respond from the FastAPI backend:
 
 ```text
-https://sentinel-in.vercel.app/api/v1/auth/signup
-https://sentinel-in.vercel.app/api/v1/auth/signin
+https://sentinel-ai-backend-qw3h.onrender.com/api/v1/auth/signup
+https://sentinel-ai-backend-qw3h.onrender.com/api/v1/auth/signin
 ```
 
 The backend will read/write MongoDB through the configured `MONGODB_URL`.
