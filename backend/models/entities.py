@@ -96,6 +96,15 @@ class GeoHotspot(BaseModel):
     model_config = {"from_attributes": True}
 
 
+class GeoIncidentCreate(BaseModel):
+    incident_type: str
+    latitude: float = Field(..., ge=-90, le=90)
+    longitude: float = Field(..., ge=-180, le=180)
+    district: str | None = None
+    state: str | None = None
+    risk_score: float | None = Field(default=None, ge=0, le=1)
+
+
 class IntelligenceFusionRequest(BaseModel):
     report_id: str | None = None
     transaction_id: str | None = None

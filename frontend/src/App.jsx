@@ -13,6 +13,7 @@ import BankDashboard from '@/pages/Bank'
 import AdminDashboard from '@/pages/Admin'
 import AnalyticsPage from '@/pages/Analytics'
 import SettingsPage from '@/pages/Settings'
+import AIServicesPage from '@/pages/AIServices'
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
                 <Route path="bank" element={<BankDashboard />} />
                 <Route path="admin" element={<AdminDashboard />} />
                 <Route path="analytics" element={<AnalyticsPage />} />
+                <Route path="ai-services" element={<AIServicesPage />} />
                 <Route path="settings" element={<SettingsPage />} />
               </Route>
             </Route>

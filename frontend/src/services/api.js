@@ -104,6 +104,14 @@ export const api = {
     return fetchJson('/capabilities/status')
   },
 
+  async createFraudGraphNode(payload) {
+    return fetchJson('/fraud-graph/nodes', { method: 'POST', body: JSON.stringify(payload) })
+  },
+
+  async createGeoIncident(payload) {
+    return fetchJson('/geo/incidents', { method: 'POST', body: JSON.stringify(payload) })
+  },
+
   async getCurrentUser() {
     return fetchJson('/auth/me')
   },

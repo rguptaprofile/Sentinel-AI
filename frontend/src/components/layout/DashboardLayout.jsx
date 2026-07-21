@@ -4,7 +4,6 @@ import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 import NotificationPanel from './NotificationPanel'
 import ChatWidget from '@/components/chatbot/ChatWidget'
-import CapabilityOverview from '@/components/dashboard/CapabilityOverview'
 import { cn } from '@/lib/utils'
 import { useIsMobile } from '@/hooks/useMediaQuery'
 
@@ -43,10 +42,7 @@ export default function DashboardLayout() {
 
         <div className="flex">
           <main className="flex-1 p-4 lg:p-6 min-h-[calc(100vh-4rem)]">
-            <CapabilityOverview />
-            <div className="mt-6">
             <Outlet />
-            </div>
           </main>
 
           {!isMobile && showNotifications && (

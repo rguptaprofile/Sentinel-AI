@@ -8,6 +8,7 @@ import {
   Settings,
   LogOut,
   BarChart3,
+  Cpu,
   ChevronLeft,
   ChevronRight,
   UserCircle,
@@ -23,6 +24,7 @@ const navItems = [
   { label: 'Bank', icon: Landmark, path: '/dashboard/bank' },
   { label: 'Admin', icon: Building2, path: '/dashboard/admin' },
   { label: 'Analytics', icon: BarChart3, path: '/dashboard/analytics' },
+  { label: 'AI Services', icon: Cpu, path: '/dashboard/ai-services' },
   { label: 'Settings', icon: Settings, path: '/dashboard/settings' },
 ]
 
