@@ -69,10 +69,10 @@ BACKEND_API_BASE_URL=https://<your-backend-domain>
 Render and Vercel. The shared session secret lets the deployed FastAPI API
 verify the bearer token issued by the Vercel auth route.
 
-Do not set `VITE_API_BASE_URL` to `http://127.0.0.1:8000` or `localhost` in
-Vercel. Those addresses only work during local development and point to each
-visitor's device once the frontend is deployed. The production default is the
-same-origin Vercel route, `/api/v1`.
+Do not set `VITE_API_BASE_URL` to a loopback address in Vercel. A loopback URL
+only works during local development and points to each visitor's device once
+the frontend is deployed. The production default is the same-origin Vercel
+route, `/api/v1`.
 
 Signup, signin, and `/auth/me` are served by Vercel API routes and write to MongoDB directly. Other `/api/v1/*` requests are proxied to `BACKEND_API_BASE_URL`.
 

@@ -97,7 +97,7 @@ python ai_models\training\train_all.py `
 Successful training writes artifacts under `ai_models/artifacts/` and updates `ai_models/artifacts/manifest.json`. Backend model status is available at:
 
 ```text
-http://127.0.0.1:8000/api/v1/intelligence/models/status
+https://sentinel-ai-backend-qw3h.onrender.com/api/v1/intelligence/models/status
 ```
 
 ## API Key Integration
@@ -126,8 +126,8 @@ CURRENCY_IMAGE_API_KEY=
 Check whether real data integrations are configured:
 
 ```text
-http://127.0.0.1:8000/api/v1/intelligence/data-sources/status
-http://127.0.0.1:8000/api/v1/intelligence/training/readiness
+https://sentinel-ai-backend-qw3h.onrender.com/api/v1/intelligence/data-sources/status
+https://sentinel-ai-backend-qw3h.onrender.com/api/v1/intelligence/training/readiness
 ```
 
 The backend will not pretend live training has happened until real datasets are present and artifacts are written to `ai_models/artifacts/manifest.json`.

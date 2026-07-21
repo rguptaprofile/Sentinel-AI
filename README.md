@@ -104,9 +104,9 @@ python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
 Useful backend URLs:
 
 ```text
-http://127.0.0.1:8000/health
-http://127.0.0.1:8000/docs
-http://127.0.0.1:8000/api/v1
+https://sentinel-ai-backend-qw3h.onrender.com/health
+https://sentinel-ai-backend-qw3h.onrender.com/docs
+https://sentinel-ai-backend-qw3h.onrender.com/api/v1
 ```
 
 ## Frontend Setup

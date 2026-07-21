@@ -35,7 +35,7 @@ function resolveApiBase() {
   }
 
   return {
-    baseUrl: 'http://127.0.0.1:8000/api/v1',
+    baseUrl: 'https://sentinel-ai-backend-qw3h.onrender.com/api/v1',
     error: '',
   }
 }
