@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Building2, Landmark, Lock, Mail, Shield, User, UserCircle, Users } from 'lucide-react'
+import { Landmark, Lock, Mail, Shield, User, UserCircle, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -13,7 +13,6 @@ const roles = [
   { id: 'citizen', label: 'Citizen', icon: UserCircle },
   { id: 'police', label: 'Police', icon: Users },
   { id: 'bank', label: 'Bank', icon: Landmark },
-  { id: 'admin', label: 'Admin', icon: Building2 },
 ]
 
 export default function SignUpPage() {

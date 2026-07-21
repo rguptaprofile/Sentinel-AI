@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from 'react'
-import api from '@/services/api'
 
 const AuthContext = createContext(null)
 
@@ -7,7 +6,6 @@ const ROLE_ROUTES = {
   citizen: '/dashboard/citizen',
   police: '/dashboard/police',
   bank: '/dashboard/bank',
-  admin: '/dashboard/admin',
 }
 
 export function AuthProvider({ children }) {
@@ -15,31 +13,7 @@ export function AuthProvider({ children }) {
     const stored = localStorage.getItem('sentinelai_user')
     return stored ? JSON.parse(stored) : null
   })
-  const [ready, setReady] = useState(false)
-
-  useEffect(() => {
-    const syncSession = async () => {
-      const token = localStorage.getItem('sentinelai_token')
-      if (!token) {
-        setUser(null)
-        setReady(true)
-        return
-      }
-
-      try {
-        const result = await api.getCurrentUser()
-        setUser(result.user)
-      } catch {
-        localStorage.removeItem('sentinelai_token')
-        localStorage.removeItem('sentinelai_user')
-        setUser(null)
-      } finally {
-        setReady(true)
-      }
-    }
-
-    syncSession()
-  }, [])
+  const [ready] = useState(true)
 
   useEffect(() => {
     if (user) {
@@ -49,22 +23,17 @@ export function AuthProvider({ children }) {
     }
   }, [user])
 
-  const login = async (role, email, password) => {
-    const result = await api.signIn({ role, email, password })
-    localStorage.setItem('sentinelai_token', result.token)
-    setUser(result.user)
-    return ROLE_ROUTES[result.user.role]
+  const login = async (role, email) => {
+    setUser({ name: email.split('@')[0] || 'Sentinel user', email, role })
+    return ROLE_ROUTES[role]
   }
 
   const signup = async (role, name, email, password) => {
-    const result = await api.signUp({ role, name, email, password })
-    localStorage.setItem('sentinelai_token', result.token)
-    setUser(result.user)
-    return ROLE_ROUTES[result.user.role]
+    setUser({ name, email, role })
+    return ROLE_ROUTES[role]
   }
 
   const logout = () => {
-    localStorage.removeItem('sentinelai_token')
     setUser(null)
   }
 

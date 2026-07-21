@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Shield, UserCircle, Users, Landmark, Building2, Mail, Lock } from 'lucide-react'
+import { Shield, UserCircle, Users, Landmark, Mail, Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -13,7 +13,6 @@ const roles = [
   { id: 'citizen', label: 'Citizen', icon: UserCircle, desc: 'Report scams & verify transactions', color: 'hover:border-[#22C55E] hover:bg-[#22C55E]/5' },
   { id: 'police', label: 'Police', icon: Users, desc: 'Intelligence & investigation tools', color: 'hover:border-primary hover:bg-primary/5' },
   { id: 'bank', label: 'Bank', icon: Landmark, desc: 'Fraud monitoring & compliance', color: 'hover:border-[#F59E0B] hover:bg-[#F59E0B]/5' },
-  { id: 'admin', label: 'Admin', icon: Building2, desc: 'System management & analytics', color: 'hover:border-[#8B5CF6] hover:bg-[#8B5CF6]/5' },
 ]
 
 export default function LoginPage() {

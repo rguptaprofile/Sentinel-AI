@@ -1,108 +1,15 @@
-import {
-  AlertTriangle,
-  FileText,
-  Gauge,
-  Banknote,
-  Sparkles,
-} from 'lucide-react'
-import StatCard from '@/components/cards/StatCard'
-import ChartCard from '@/components/cards/ChartCard'
-import MapCard from '@/components/cards/MapCard'
-import FraudTrendChart from '@/components/charts/FraudTrendChart'
-import ReportsByStateChart from '@/components/charts/ReportsByStateChart'
-import ScamCategoriesChart from '@/components/charts/ScamCategoriesChart'
-import IndiaHeatMap from '@/components/maps/IndiaHeatMap'
-import FraudNetworkGraph from '@/components/maps/FraudNetworkGraph'
-import { FraudReportsTable } from '@/components/common/DataTable'
-import { LiveAlerts } from '@/components/alerts/AlertCard'
-import { useDashboardData } from '@/hooks/useDashboardData'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ScrollArea } from '@/components/ui/scroll-area'
-
-const recommendations = [
-  'Deploy enhanced voice scam detection to Delhi NCR — 47 new cases detected in 2 hours',
-  'Investigate fraud ring connecting UPI mule accounts ACC-78234 and ACC-45123',
-  'Increase counterfeit monitoring in Chennai retail markets — cluster detected',
-  'Issue citizen advisory for new OTP social engineering pattern in Gujarat',
-  'Coordinate with HDFC Bank on blocked transaction TXN-002 investigation',
-]
+import { AlertTriangle, FileText, MapPinned, ShieldAlert } from 'lucide-react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { useReports } from '@/context/ReportContext'
 
 export default function PoliceDashboard() {
-  const { stats, loading, error } = useDashboardData('police')
-
-  return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold">Police Intelligence Dashboard</h1>
-        <p className="text-muted-foreground">Real-time threat monitoring and fraud investigation center</p>
-      </div>
-
-      {error && <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">{error}</div>}
-
-      {/* Top stat cards */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard title="Active Threats" value={stats?.activeThreats ?? '—'} change="+8 today" icon={AlertTriangle} loading={loading} />
-        <StatCard title="Today's Reports" value={stats?.todayReports ?? '—'} change="+23%" icon={FileText} loading={loading} />
-        <StatCard title="Risk Score" value={stats?.riskScore ?? '—'} change="Elevated" changeType="down" icon={Gauge} loading={loading} />
-        <StatCard title="Counterfeit Cases" value={stats?.counterfeitCases ?? '—'} change="+5" icon={Banknote} loading={loading} />
-      </div>
-
-      {/* Maps section */}
-      <div className="grid lg:grid-cols-2 gap-6">
-        <MapCard title="India Fraud Heat Map" description="Geospatial distribution of reported cybercrime">
-          <IndiaHeatMap height="380px" />
-        </MapCard>
-        <ChartCard title="Fraud Network Graph" description="AI-detected connections between suspects, accounts, and victims">
-          <FraudNetworkGraph />
-        </ChartCard>
-      </div>
-
-      {/* Charts */}
-      <div className="grid lg:grid-cols-3 gap-6">
-        <ChartCard title="Fraud Trend" description="Monthly report volume and losses">
-          <FraudTrendChart />
-        </ChartCard>
-        <ChartCard title="Reports by State" description="Top reporting regions">
-          <ReportsByStateChart />
-        </ChartCard>
-        <ChartCard title="Scam Categories" description="Distribution by fraud type">
-          <ScamCategoriesChart />
-        </ChartCard>
-      </div>
-
-      {/* Table + AI panel + Alerts */}
-      <div className="grid lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
-          <h3 className="font-semibold mb-4">Recent Reports</h3>
-          <FraudReportsTable />
-        </div>
-        <div className="space-y-6">
-          <Card className="shadow-lg">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-base flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-primary" />
-                AI Recommendations
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ScrollArea className="h-[240px]">
-                <ul className="space-y-3">
-                  {recommendations.map((rec, i) => (
-                    <li key={i} className="text-sm text-muted-foreground flex gap-2">
-                      <span className="text-primary font-bold shrink-0">{i + 1}.</span>
-                      {rec}
-                    </li>
-                  ))}
-                </ul>
-              </ScrollArea>
-            </CardContent>
-          </Card>
-          <div>
-            <h3 className="font-semibold mb-4">Live Alerts</h3>
-            <LiveAlerts />
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+  const { reports } = useReports()
+  return <div className="space-y-6">
+    <div><p className="text-sm font-medium text-primary">Law enforcement workspace</p><h1 className="text-2xl font-bold">Citizen complaints</h1><p className="text-muted-foreground">Prioritised reports from SentinelAI citizens, ready for triage and investigation.</p></div>
+    <div className="grid gap-4 sm:grid-cols-3"><Metric icon={FileText} value={reports.length} label="Reports awaiting review" /><Metric icon={AlertTriangle} value={reports.filter((r) => r.status === 'New').length} label="New priority alerts" /><Metric icon={MapPinned} value="12" label="Active hotspot signals" /></div>
+    <Card className="shadow-lg"><CardHeader><CardTitle>Incoming citizen reports</CardTitle><CardDescription>All citizen reports are visible to police response teams.</CardDescription></CardHeader><CardContent><div className="overflow-x-auto"><table className="w-full text-left text-sm"><thead className="border-b text-xs uppercase text-muted-foreground"><tr><th className="p-3">Case</th><th className="p-3">Channel</th><th className="p-3">Location</th><th className="p-3">Received</th><th className="p-3">Status</th><th /></tr></thead><tbody>{reports.map((r) => <tr className="border-b last:border-0" key={r.id}><td className="p-3"><b>{r.type}</b><div className="text-xs text-muted-foreground">{r.id} · {r.title}</div></td><td className="p-3">{r.channel}</td><td className="p-3">{r.location}</td><td className="p-3">{r.createdAt}</td><td className="p-3"><span className="rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-700">{r.status}</span></td><td className="p-3"><Button size="sm" variant="outline">Review</Button></td></tr>)}</tbody></table></div></CardContent></Card>
+    <Card className="border-primary/20 bg-primary/5"><CardContent className="flex gap-3 p-5"><ShieldAlert className="h-5 w-5 shrink-0 text-primary" /><div><b className="text-sm">AI triage is ready</b><p className="mt-1 text-sm text-muted-foreground">Digital arrest, linked-account, and hotspot signals can be correlated when connected to live services.</p></div></CardContent></Card>
+  </div>
 }
+function Metric({ icon: Icon, value, label }) { return <Card><CardContent className="flex items-center gap-4 p-5"><Icon className="h-8 w-8 text-primary" /><div><p className="text-2xl font-bold">{value}</p><p className="text-sm text-muted-foreground">{label}</p></div></CardContent></Card> }
