@@ -1,254 +1,144 @@
 # SentinelAI
 
-SentinelAI is an AI-powered Digital Public Safety Intelligence platform for fraud detection, counterfeit currency screening, graph intelligence, geospatial crime analysis, and citizen fraud protection.
+> **AI for Digital Public Safety: Defeating Counterfeiting, Fraud & Digital Arrest Scams**
 
-Production frontend:
+SentinelAI is a hackathon prototype that helps citizens report suspected fraud through AI-assisted workflows, then gives police and banking teams a shared view of the resulting cases. It brings five public-safety intelligence capabilities into one role-based platform.
 
-```text
-https://sentinel-in.vercel.app
+## Challenge alignment
+
+Digital fraud is increasingly coordinated across calls, payments, devices, locations, and social channels. Digital-arrest scams exploit impersonation and urgency; counterfeit notes are difficult to verify in the field; and disconnected reports make coordinated fraud hard to investigate.
+
+SentinelAI shifts the workflow from a complaint-only process to an intelligence-first process: **report -> analyse -> correlate -> triage -> respond**.
+
+## What we built
+
+### Citizen workspace
+
+Citizens can submit cases through five focused workflows:
+
+1. **Digital Arrest Alert** - classifies suspicious police/agency impersonation calls using scam-script indicators.
+2. **Counterfeit Currency** - creates a note-scan case and returns a counterfeit/manual-review signal.
+3. **Fraud Network Intelligence** - records risky UPI IDs, accounts, devices, and mule indicators as graph nodes.
+4. **Crime Pattern Map** - creates geospatial incidents that can be surfaced as hotspot intelligence.
+5. **Citizen Fraud Shield** - assesses suspicious WhatsApp, IVR, and mobile-app messages.
+
+### Police and bank workspaces
+
+- **Police:** shared queue of citizen complaints for triage and investigation.
+- **Bank:** payment, account, and counterfeit-related cases filtered from the shared queue.
+
+## Prototype workflow
+
+```mermaid
+flowchart LR
+  C["Citizen report"] --> API["FastAPI case API"]
+  API --> D["Digital arrest classifier"]
+  API --> CC["Counterfeit scan"]
+  API --> G["Fraud graph node"]
+  API --> M["Geo incident"]
+  D --> F["AI fusion / risk signal"]
+  CC --> F
+  G --> F
+  M --> F
+  API --> P["Police case queue"]
+  API --> B["Bank alert queue"]
 ```
 
-## Architecture
+## Technology
+
+| Layer | Stack |
+| --- | --- |
+| Frontend | React, Vite, Tailwind CSS, Framer Motion, Lucide |
+| Backend | FastAPI, Pydantic |
+| Data store | MongoDB / MongoDB Atlas |
+| AI prototype | Rule and synthetic-artifact-backed model signals, fusion scoring |
+| Visual intelligence | Fraud graph and geospatial incident APIs |
+
+## Project structure
 
 ```text
-Vercel React frontend
-  |
-  | deployed FastAPI backend /api/v1/*
-  v
-MongoDB-backed auth and FastAPI backend APIs
-  |
-  | MONGODB_URL from root .env or deployment secrets
-  v
-MongoDB Atlas
-  |
-  +-- citizen_reports
-  +-- transaction_events
-  +-- alerts
-  +-- counterfeit_scans
-  +-- fraud_graph_nodes
-  +-- fraud_graph_edges
-  +-- geo_incidents
-  +-- model_runs
-  +-- users
+frontend/       Role-based React application
+backend/        FastAPI routes, services, MongoDB models
+ai_models/      Synthetic datasets, training utilities, model artifacts
+docs/           Deployment guidance
 ```
 
-The frontend never connects directly to MongoDB. All data flows through the backend API.
+## Run locally
 
-## Main Features
+### 1. Configure MongoDB
 
-- MongoDB-backed signup/signin with hashed passwords and unique user email checks.
-- Real API-first dashboard data with local JSON fallbacks removed.
-- MongoDB persistence for reports, alerts, scans, fraud graph, geospatial incidents, model runs, transactions, and users.
-- AI model status endpoint with trained artifact tracking.
-- Real data-source readiness endpoint for telecom, MHA/NCRB, WhatsApp, speech, geocoding, bank fraud, and currency-image APIs.
-- Synthetic baseline generator for unavailable real datasets, clearly marked as synthetic.
-
-## Project Structure
-
-```text
-backend/              FastAPI backend
-frontend/             React + Vite frontend
-ai_models/            Training scripts, artifacts, and synthetic datasets
-docs/                 Production setup and project guidance
-```
-
-## Environment
-
-Create one root `.env` file. Do not commit it.
-
-Required production values:
+The backend needs MongoDB. Use a local MongoDB instance or MongoDB Atlas. Create a root `.env` file:
 
 ```env
-APP_ENV=production
-API_PREFIX=/api/v1
-MONGODB_URL=<mongodb-atlas-connection-string>
-MONGODB_DB_NAME=sentinel-ai
-MONGODB_TIMEOUT_MS=10000
-CORS_ORIGINS=["https://sentinel-in.vercel.app"]
-VITE_API_BASE_URL=https://sentinel-ai-backend-qw3h.onrender.com
-AUTH_SESSION_SECRET=<strong-random-secret>
+MONGODB_URL=mongodb://localhost:27017
+MONGODB_DB_NAME=sentinelai
 ```
 
-Optional real-data API keys:
+For Atlas, replace `MONGODB_URL` with the Atlas connection string. Do not commit this file.
 
-```env
-TELECOM_API_BASE_URL=
-TELECOM_API_KEY=
-MHA_ALERT_API_BASE_URL=
-MHA_ALERT_API_KEY=
-NCRB_API_BASE_URL=
-NCRB_API_KEY=
-WHATSAPP_API_BASE_URL=
-WHATSAPP_API_KEY=
-SPEECH_AI_API_BASE_URL=
-SPEECH_AI_API_KEY=
-GEOCODING_API_BASE_URL=
-GEOCODING_API_KEY=
-BANK_FRAUD_API_BASE_URL=
-BANK_FRAUD_API_KEY=
-CURRENCY_IMAGE_API_BASE_URL=
-CURRENCY_IMAGE_API_KEY=
-```
-
-MongoDB passwords inside `MONGODB_URL` must be URL encoded. Example: `#` becomes `%23`, `@` becomes `%40`.
-
-## Backend Setup
+### 2. Start the backend
 
 ```powershell
-cd E:\Sentinel-AI
 python -m pip install -r backend\requirements.txt
 python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
 ```
 
-Useful backend URLs:
-
-```text
-https://sentinel-ai-backend-qw3h.onrender.com/health
-https://sentinel-ai-backend-qw3h.onrender.com/docs
-https://sentinel-ai-backend-qw3h.onrender.com/api/v1
-```
-
-## Frontend Setup
+Check it is running:
 
 ```powershell
-cd E:\Sentinel-AI\frontend
+Invoke-RestMethod http://127.0.0.1:8000/health
+```
+
+### 3. Start the frontend
+
+Open a second terminal:
+
+```powershell
+cd frontend
 npm install
-npm.cmd run dev -- --host 127.0.0.1 --port 5173
+$env:VITE_API_BASE_URL="http://127.0.0.1:8000"
+npm.cmd run dev
 ```
 
-Local frontend:
+Open `http://localhost:5173`.
 
-```text
-http://127.0.0.1:5173
-```
+## Hackathon demo script
 
-Build:
+1. Sign in as a **Citizen** (prototype login is role-based and frontend-only).
+2. Submit a **Digital Arrest Alert** containing words such as `digital arrest`, `police`, `OTP`, `KYC`, and `account blocked`.
+3. Submit a **Counterfeit Currency** case with a suspicious serial such as `FAKE500A99123`.
+4. Submit a **Fraud Network Intelligence** case with a UPI ID/account/device reference.
+5. Submit a **Crime Pattern Map** case with location `Mumbai`, `New Delhi`, or `Bengaluru`.
+6. Submit a **Citizen Fraud Shield** case describing a suspicious WhatsApp or IVR message.
+7. Sign in as **Police** to show the full shared case queue.
+8. Sign in as **Bank** to show the bank-relevant subset.
 
-```powershell
-npm.cmd run build
-```
+Useful API pages:
 
-## Auth Flow
+- `http://127.0.0.1:8000/docs` — Swagger API explorer
+- `GET /api/v1/reports/` — submitted citizen cases
+- `GET /api/v1/fraud-graph/networks` — graph nodes
+- `GET /api/v1/geo/hotspots` — geospatial incidents
+- `GET /api/v1/capabilities/status` — five-capability status
 
-Signup:
+## Prototype scope and responsible claims
 
-```text
-POST /api/v1/auth/signup
-```
+This is a hackathon prototype. The current AI services use deterministic scoring and synthetic training artifacts to demonstrate the workflow; they are **not** connected to live telecom, RBI, MHA, WhatsApp, bank, or law-enforcement systems. No production decision should be made from prototype outputs.
 
-Signin:
+The next stage would add consented/authorised data feeds, validated datasets, human review, evidence chains, security audits, model evaluation, and agency integration agreements.
 
-```text
-POST /api/v1/auth/signin
-```
+## Future roadmap
 
-Users are stored in MongoDB in the `users` collection. Passwords are stored as PBKDF2 hashes, not plain text.
+- Mobile note-image capture and computer-vision security-feature analysis
+- Verified telecom and call-metadata ingestion for real-time digital-arrest alerts
+- Transaction/account edge ingestion for fraud-ring clustering
+- District-level hotspot prioritisation and response workflows
+- Multilingual WhatsApp, IVR, and voice-clone fraud support
+- Investigator evidence packets and auditable case timelines
 
-## AI Models
+## Security notes
 
-The platform tracks five core AI capability areas:
-
-- Digital Arrest Scam Detection and Alerting
-- Counterfeit Currency Identification Agent
-- Fraud Network Graph Intelligence
-- Geospatial Crime Pattern Intelligence
-- Citizen Fraud Shield
-
-Model status:
-
-```text
-GET /api/v1/intelligence/models/status
-```
-
-Data-source readiness:
-
-```text
-GET /api/v1/intelligence/data-sources/status
-GET /api/v1/intelligence/training/readiness
-```
-
-## Real Training
-
-Real training requires licensed datasets. See:
-
-```text
-ai_models/training/DATASETS.md
-```
-
-Install optional AI dependencies:
-
-```powershell
-python -m pip install -r requirements-ai.txt
-```
-
-Train with real datasets:
-
-```powershell
-python ai_models\training\train_all.py `
-  --digital-arrest-data E:\datasets\digital_arrest.csv `
-  --counterfeit-data E:\datasets\counterfeit_notes\data.yaml `
-  --fraud-graph-data E:\datasets\fraud_graph_edges.csv `
-  --geospatial-data E:\datasets\geo_incidents.csv `
-  --citizen-shield-data E:\datasets\citizen_shield.csv
-```
-
-## Synthetic Baselines
-
-When real datasets/API feeds are unavailable, the repo can generate 500 synthetic records per model for workflow testing only:
-
-```powershell
-python ai_models\training\train_synthetic_baselines.py
-```
-
-These artifacts are marked as `synthetic: true` and must not be represented as real-world trained models.
-
-## Production Deployment
-
-1. Deploy backend to a public HTTPS host.
-2. Set backend secrets:
-
-```text
-MONGODB_URL=<mongodb-atlas-connection-string>
-MONGODB_DB_NAME=sentinel-ai
-CORS_ORIGINS=["https://sentinel-in.vercel.app"]
-```
-
-3. Set Vercel frontend env:
-
-```text
-VITE_API_BASE_URL=https://sentinel-ai-backend-qw3h.onrender.com
-MONGODB_URL=<mongodb-atlas-connection-string>
-MONGODB_DB_NAME=sentinel-ai
-AUTH_SESSION_SECRET=<strong-random-secret>
-```
-
-Signup, signin, `/auth/me`, and all other API calls use the deployed FastAPI backend directly.
-
-4. Redeploy Vercel frontend.
-
-5. Verify:
-
-```text
-https://<backend-domain>/health
-https://sentinel-in.vercel.app/api/v1/auth/signin
-https://sentinel-in.vercel.app
-```
-
-## Presentation Deck
-
-Suggested deck outline:
-
-1. Problem: digital arrest scams, counterfeit currency, fraud networks, cybercrime hotspots.
-2. Solution: SentinelAI unified intelligence platform.
-3. Architecture: Vercel frontend, FastAPI backend, MongoDB Atlas, AI model artifacts.
-4. Core modules: scam detection, counterfeit detection, fraud graph, geospatial intelligence, citizen shield.
-5. Data governance: real API keys, MongoDB persistence, no fake fallback data.
-6. Deployment: frontend on Vercel, backend on HTTPS host, MongoDB Atlas.
-7. Roadmap: real agency integrations, production ML training, audit evidence workflows.
-
-## Security Notes
-
-- Keep `.env` out of git.
-- Rotate any API keys that were ever committed or pasted into shared files.
-- Do not expose MongoDB credentials to frontend code.
-- Restrict MongoDB Atlas network access to trusted backend hosts.
+- Keep `.env` and all credentials out of Git.
+- Frontend clients never connect directly to MongoDB.
+- Use least-privilege Atlas users and restrict network access for deployed systems.
+- Treat submitted fraud reports as sensitive information.
