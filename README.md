@@ -102,17 +102,6 @@ npm.cmd run dev
 
 Open `http://localhost:5173`.
 
-## Hackathon demo script
-
-1. Sign in as a **Citizen** (prototype login is role-based and frontend-only).
-2. Submit a **Digital Arrest Alert** containing words such as `digital arrest`, `police`, `OTP`, `KYC`, and `account blocked`.
-3. Submit a **Counterfeit Currency** case with a suspicious serial such as `FAKE500A99123`.
-4. Submit a **Fraud Network Intelligence** case with a UPI ID/account/device reference.
-5. Submit a **Crime Pattern Map** case with location `Mumbai`, `New Delhi`, or `Bengaluru`.
-6. Submit a **Citizen Fraud Shield** case describing a suspicious WhatsApp or IVR message.
-7. Sign in as **Police** to show the full shared case queue.
-8. Sign in as **Bank** to show the bank-relevant subset.
-
 Useful API pages:
 
 - `http://127.0.0.1:8000/docs` — Swagger API explorer
