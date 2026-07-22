@@ -30,7 +30,7 @@ function resolveApiBase() {
     return {
       baseUrl: configuredBase.endsWith('/api/v1') ? configuredBase : `${configuredBase}/api/v1`,
       error: '',
-      demoMode: true,
+      demoMode: false,
     }
   }
 
@@ -89,6 +89,10 @@ async function fetchJson(path, options = {}) {
 }
 
 export const api = {
+  async getCitizenReports() {
+    return fetchJson('/reports/')
+  },
+
   async getFraudReports() {
     return fetchJson('/dashboard/reports')
   },
